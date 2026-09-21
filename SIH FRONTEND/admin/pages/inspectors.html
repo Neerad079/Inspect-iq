@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Inspectors | SmartInspect AI</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/inspectors.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside
+    class="sidebar"
+    id="sidebar"
+>
+
+
+    <!-- LOGO -->
+
+    <div class="logo-area">
+
+        <div class="logo-icon">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+        </div>
+
+        <div class="logo-text">
+
+            SmartInspect <b>AI</b>
+
+        </div>
+
+
+        <!-- Mobile close -->
+
+        <button
+            class="close-sidebar"
+            id="closeSidebar"
+            type="button"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+
+    <!-- =================================================
+         NAVIGATION
+    ================================================= -->
+
+    <nav class="navigation">
+
+
+        <a
+            href="dashboard.html"
+            class="nav-item"
+        >
+
+            <i class="fa-solid fa-house"></i>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="institutions.html"
+            class="nav-item"
+        >
+
+            <i class="fa-solid fa-building"></i>
+
+            <span>
+                Institutions
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="inspections.html"
+            class="nav-item"
+        >
+
+            <i class="fa-solid fa-clipboard-check"></i>
+
+            <span>
+                Inspections
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="alerts.html"
+            class="nav-item"
+        >
+
+            <i class="fa-solid fa-bell"></i>
+
+            <span>
+                Alerts
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="reports.html"
+            class="nav-item"
+        >
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            <span>
+                Reports
+            </span>
+
+        </a>
+
+
+
+        <!-- ACTIVE -->
+
+        <a
+            href="inspectors.html"
+            class="nav-item active"
+        >
+
+            <i class="fa-solid fa-user-shield"></i>
+
+            <span>
+                Inspectors
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="settings.html"
+            class="nav-item"
+        >
+
+            <i class="fa-solid fa-gear"></i>
+
+            <span>
+                Settings
+            </span>
+
+        </a>
+
+    </nav>
+
+
+
+    <!-- =================================================
+         ADMIN PROFILE
+    ================================================= -->
+
+    <div class="admin-profile">
+
+        <div class="profile-image">
+
+            <i class="fa-solid fa-user"></i>
+
+        </div>
+
+
+        <div class="profile-info">
+
+            <strong>
+                Admin
+            </strong>
+
+            <small>
+                Administrator
+            </small>
+
+        </div>
+
+
+        <i
+            class="fa-solid fa-chevron-right profile-arrow"
+        ></i>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     SIDEBAR OVERLAY
+===================================================== -->
+
+<div
+    class="sidebar-overlay"
+    id="sidebarOverlay"
+></div>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- =================================================
+         MOBILE HEADER
+    ================================================= -->
+
+    <header class="mobile-header">
+
+
+        <button
+            class="menu-btn"
+            id="menuBtn"
+            type="button"
+            aria-label="Open menu"
+        >
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <div class="mobile-brand">
+
+            SmartInspect <span>AI</span>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         TOP BAR
+    ================================================= -->
+
+    <div class="topbar">
+
+
+        <div class="top-search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="topSearch"
+                placeholder="Search inspectors..."
+                autocomplete="off"
+            >
+
+        </div>
+
+
+
+        <div class="top-actions">
+
+
+            <button
+                class="notification-btn"
+                type="button"
+            >
+
+                <i class="fa-solid fa-bell"></i>
+
+                <span>
+                    5
+                </span>
+
+            </button>
+
+
+            <div class="top-avatar">
+                A
+            </div>
+
+
+            <div class="top-admin">
+
+                <span>
+                    Admin
+                </span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         PAGE CONTENT
+    ================================================= -->
+
+    <div class="page-content">
+
+
+        <!-- =================================================
+             PAGE HEADER
+        ================================================= -->
+
+        <section class="page-header">
+
+
+            <div class="header-left">
+
+
+                <div class="page-icon">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h1>
+                        Inspectors
+                    </h1>
+
+                    <p>
+                        Manage inspectors and their assignments
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <button
+                class="add-inspector-btn"
+                id="addInspectorBtn"
+                type="button"
+            >
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Inspector
+
+            </button>
+
+        </section>
+
+
+
+        <!-- =================================================
+             STATISTICS
+        ================================================= -->
+
+        <section class="stats-grid">
+
+
+            <!-- TOTAL -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Total Inspectors
+                    </span>
+
+                    <strong>
+                        12
+                    </strong>
+
+                    <small class="positive">
+                        ↑ 8%
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ACTIVE -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Active
+                    </span>
+
+                    <strong>
+                        10
+                    </strong>
+
+                    <small class="positive">
+                        ↑ 10%
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- INACTIVE -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon red">
+
+                    <i class="fa-solid fa-user-slash"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Inactive
+                    </span>
+
+                    <strong>
+                        2
+                    </strong>
+
+                    <small class="negative">
+                        ↓ 4%
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ASSIGNMENT -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+
+                    <i class="fa-solid fa-clipboard-list"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        On Assignment
+                    </span>
+
+                    <strong>
+                        6
+                    </strong>
+
+                    <small class="positive">
+                        ↑ 12%
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FILTERS
+        ================================================= -->
+
+        <section class="filters">
+
+
+            <!-- SEARCH -->
+
+            <div class="filter-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="inspectorSearch"
+                    placeholder="Search inspectors..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+
+            <!-- STATUS -->
+
+            <select id="statusFilter">
+
+                <option value="all">
+                    All Status
+                </option>
+
+                <option value="active">
+                    Active
+                </option>
+
+                <option value="onduty">
+                    On Duty
+                </option>
+
+                <option value="inactive">
+                    Inactive
+                </option>
+
+            </select>
+
+
+
+            <!-- REGION -->
+
+            <select id="regionFilter">
+
+                <option value="all">
+                    All Regions
+                </option>
+
+                <option value="jaipur">
+                    Jaipur
+                </option>
+
+                <option value="udaipur">
+                    Udaipur
+                </option>
+
+                <option value="jodhpur">
+                    Jodhpur
+                </option>
+
+                <option value="kota">
+                    Kota
+                </option>
+
+                <option value="bikaner">
+                    Bikaner
+                </option>
+
+                <option value="ajmer">
+                    Ajmer
+                </option>
+
+                <option value="bharatpur">
+                    Bharatpur
+                </option>
+
+                <option value="alwar">
+                    Alwar
+                </option>
+
+            </select>
+
+
+
+            <button
+                class="filter-btn"
+                id="filterBtn"
+                type="button"
+            >
+
+                <i class="fa-solid fa-filter"></i>
+
+                Filter
+
+            </button>
+
+        </section>
+
+
+
+        <!-- =================================================
+             INSPECTORS TABLE
+        ================================================= -->
+
+        <section class="inspectors-section">
+
+
+            <div class="table-container">
+
+
+                <table>
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                #
+                            </th>
+
+                            <th>
+                                Name
+                            </th>
+
+                            <th>
+                                ID
+                            </th>
+
+                            <th>
+                                Region
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Assigned Inspections
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+
+                    <tbody id="inspectorsTable">
+
+
+                        <!-- ROW 1 -->
+
+                        <tr
+                            data-status="active"
+                            data-region="jaipur"
+                        >
+
+                            <td>
+                                1
+                            </td>
+
+
+                            <td>
+
+                                <div class="inspector-name">
+
+                                    <div class="inspector-avatar avatar-blue">
+                                        RK
+                                    </div>
+
+                                    <span>
+                                        Ramesh Kumar
+                                    </span>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                INSP001
+                            </td>
+
+
+                            <td>
+                                Jaipur
+                            </td>
+
+
+                            <td>
+
+                                <span class="status active">
+                                    Active
+                                </span>
+
+                            </td>
+
+
+                            <td>
+                                4
+                            </td>
+
+
+                            <td>
+
+                                <div class="action-buttons">
+
+
+                                    <button
+                                        class="icon-btn view-inspector"
+                                        title="View"
+                                        onclick="viewInspector('Ramesh Kumar','INSP001','Jaipur','Active','4')"
+                                    >
+
+                                        <i class="fa-solid fa-eye"></i>
+
+                                    </button>
+
+
+                                    <button
+                                        class="icon-btn edit-inspector"
+                                        title="Edit"
+                                        onclick="editInspector('Ramesh Kumar','INSP001')"
+                                    >
+
+                                        <i class="fa-solid fa-pen"></i>
+
+                                    </button>
+
+
+                                    <button
+                                        class="icon-btn more-btn"
+                                        title="More"
+                                    >
+
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- ROW 2 -->
+
+                        <tr
+                            data-status="active"
+                            data-region="udaipur"
+                        >
+
+                            <td>
+                                2
+                            </td>
+
+
+                            <td>
+
+                                <div class="inspector-name">
+
+                                    <div class="inspector-avatar avatar-green">
+                                        SP
+                                    </div>
+
+                                    <span>
+                                        Sneha Patel
+                                    </span>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                INSP002
+                            </td>
+
+
+                            <td>
+                                Udaipur
+                            </td>
+
+
+                            <td>
+
+                                <span class="status active">
+                                    Active
+                                </span>
+
+                            </td>
+
+
+                            <td>
+                                3
+                            </td>
+
+
+                            <td>
+
+                                <div class="action-buttons">
+
+                                    <button
+                                        class="icon-btn"
+                                        onclick="viewInspector('Sneha Patel','INSP002','Udaipur','Active','3')"
+                                    >
+
+                                        <i class="fa-solid fa-eye"></i>
+
+                                    </button>
+
+
+                                    <button
+                                        class="icon-btn"
+                                        onclick="editInspector('Sneha Patel','INSP002')"
+                                    >
+
+                                        <i class="fa-solid fa-pen"></i>
+
+                                    </button>
+
+
+                                    <button class="icon-btn">
+
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- ROW 3 -->
+
+                        <tr
+                            data-status="onduty"
+                            data-region="jodhpur"
+                        >
+
+                            <td>
+                                3
+                            </td>
+
+
+                            <td>
+
+                                <div class="inspector-name">
+
+                                    <div class="inspector-avatar avatar-purple">
+                                        AM
+                                    </div>
+
+                                    <span>
+                                        Amit Meena
+                                    </span>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                INSP003
+                            </td>
+
+
+                            <td>
+                                Jodhpur
+                            </td>
+
+
+                            <td>
+
+                                <span class="status onduty">
+                                    On Duty
+                                </span>
+
+                            </td>
+
+
+                            <td>
+                                2
+                            </td>
+
+
+                            <td>
+
+                                <div class="action-buttons">
+
+                                    <button
+                                        class="icon-btn"
+                                        onclick="viewInspector('Amit Meena','INSP003','Jodhpur','On Duty','2')"
+                                    >
+
+                                        <i class="fa-solid fa-eye"></i>
+
+                                    </button>
+
+
+                                    <button
+                                        class="icon-btn"
+                                        onclick="editInspector('Amit Meena','INSP003')"
+                                    >
+
+                                        <i class="fa-solid fa-pen"></i>
+
+                                    </button>
+
+
+                                    <button class="icon-btn">
+
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- ROW 4 -->
+
+                        <tr
+                            data-status="active"
+                            data-region="kota"
+                        >
+
+                            <td>
+                                4
+                            </td>
+
+
+                            <td>
+
+                                <div class="inspector-name">
+
+                                    <div class="inspector-avatar avatar-cyan">
+                                        PK
+                                    </div>
+
+                                    <span>
+                                        Pooja Sharma
+                                    </span>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                INSP004
+                            </td>
+
+
+                            <td>
+                                Kota
+                            </td>
+
+
+                            <td>
+
+                                <span class="status active">
+                                    Active
+                                </span>
+
+                            </td>
+
+
+                            <td>
+                                5
+                            </td>
+
+
+                            <td>
+
+                                <div class="action-buttons">
+
+                                    <button
+                                        class="icon-btn"
+                                        onclick="viewInspector('Pooja Sharma','INSP004','Kota','Active','5')"
+                                    >
+
+                                        <i class="fa-solid fa-eye"></i>
+
+                                    </button>
+
+
+                                    <button
+                                        class="icon-btn"
+                                        onclick="editInspector('Pooja Sharma','INSP004')"
+                                    >
+
+                                        <i class="fa-solid fa-pen"></i>
+
+                                    </button>
+
+
+                                    <button class="icon-btn">
+
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- ROW 5 -->
+
+                        <tr
+                            data-status="inactive"
+                            data-region="bikaner"
+                        >
+
+                            <td>
+                                5
+                            </td>
+
+
+                            <td>
+
+                                <div class="inspector-name">
+
+                                    <div class="inspector-avatar avatar-red">
+                                        VS
+                                    </div>
+
+                                    <span>
+                                        Vikram Singh
+                                    </span>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                INSP005
+                            </td>
+
+
+                            <td>
+                                Bikaner
+                            </td>
+
+
+                            <td>
+
+                                <span class="status inactive">
+                                    Inactive
+                                </span>
+
+                            </td>
+
+
+                            <td>
+                                0
+                            </td>
+
+
+                            <td>
+
+                                <div class="action-buttons">
+
+                                    <button
+                                        class="icon-btn"
+                                        onclick="viewInspector('Vikram Singh','INSP005','Bikaner','Inactive','0')"
+                                    >
+
+                                        <i class="fa-solid fa-eye"></i>
+
+                                    </button>
+
+
+                                    <button
+                                        class="icon-btn"
+                                        onclick="editInspector('Vikram Singh','INSP005')"
+                                    >
+
+                                        <i class="fa-solid fa-pen"></i>
+
+                                    </button>
+
+
+                                    <button class="icon-btn">
+
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- ROW 6 -->
+
+                        <tr
+                            data-status="active"
+                            data-region="ajmer"
+                        >
+
+                            <td>
+                                6
+                            </td>
+
+
+                            <td>
+
+                                <div class="inspector-name">
+
+                                    <div class="inspector-avatar avatar-green">
+                                        ND
+                                    </div>
+
+                                    <span>
+                                        Neha Dubey
+                                    </span>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                INSP006
+                            </td>
+
+
+                            <td>
+                                Ajmer
+                            </td>
+
+
+                            <td>
+
+                                <span class="status active">
+                                    Active
+                                </span>
+
+                            </td>
+
+
+                            <td>
+                                3
+                            </td>
+
+
+                            <td>
+
+                                <div class="action-buttons">
+
+                                    <button
+                                        class="icon-btn"
+                                        onclick="viewInspector('Neha Dubey','INSP006','Ajmer','Active','3')"
+                                    >
+
+                                        <i class="fa-solid fa-eye"></i>
+
+                                    </button>
+
+
+                                    <button
+                                        class="icon-btn"
+                                        onclick="editInspector('Neha Dubey','INSP006')"
+                                    >
+
+                                        <i class="fa-solid fa-pen"></i>
+
+                                    </button>
+
+
+                                    <button class="icon-btn">
+
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- ROW 7 -->
+
+                        <tr
+                            data-status="onduty"
+                            data-region="bharatpur"
+                        >
+
+                            <td>
+                                7
+                            </td>
+
+
+                            <td>
+
+                                <div class="inspector-name">
+
+                                    <div class="inspector-avatar avatar-blue">
+                                        RA
+                                    </div>
+
+                                    <span>
+                                        Rajesh Awasthi
+                                    </span>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                INSP007
+                            </td>
+
+
+                            <td>
+                                Bharatpur
+                            </td>
+
+
+                            <td>
+
+                                <span class="status onduty">
+                                    On Duty
+                                </span>
+
+                            </td>
+
+
+                            <td>
+                                4
+                            </td>
+
+
+                            <td>
+
+                                <div class="action-buttons">
+
+                                    <button
+                                        class="icon-btn"
+                                        onclick="viewInspector('Rajesh Awasthi','INSP007','Bharatpur','On Duty','4')"
+                                    >
+
+                                        <i class="fa-solid fa-eye"></i>
+
+                                    </button>
+
+
+                                    <button
+                                        class="icon-btn"
+                                        onclick="editInspector('Rajesh Awasthi','INSP007')"
+                                    >
+
+                                        <i class="fa-solid fa-pen"></i>
+
+                                    </button>
+
+
+                                    <button class="icon-btn">
+
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- ROW 8 -->
+
+                        <tr
+                            data-status="active"
+                            data-region="alwar"
+                        >
+
+                            <td>
+                                8
+                            </td>
+
+
+                            <td>
+
+                                <div class="inspector-name">
+
+                                    <div class="inspector-avatar avatar-cyan">
+                                        SK
+                                    </div>
+
+                                    <span>
+                                        Suman Khanna
+                                    </span>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                INSP008
+                            </td>
+
+
+                            <td>
+                                Alwar
+                            </td>
+
+
+                            <td>
+
+                                <span class="status active">
+                                    Active
+                                </span>
+
+                            </td>
+
+
+                            <td>
+                                2
+                            </td>
+
+
+                            <td>
+
+                                <div class="action-buttons">
+
+                                    <button
+                                        class="icon-btn"
+                                        onclick="viewInspector('Suman Khanna','INSP008','Alwar','Active','2')"
+                                    >
+
+                                        <i class="fa-solid fa-eye"></i>
+
+                                    </button>
+
+
+                                    <button
+                                        class="icon-btn"
+                                        onclick="editInspector('Suman Khanna','INSP008')"
+                                    >
+
+                                        <i class="fa-solid fa-pen"></i>
+
+                                    </button>
+
+
+                                    <button class="icon-btn">
+
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 TABLE FOOTER
+            ================================================= -->
+
+            <div class="table-footer">
+
+
+                <span id="resultText">
+                    Showing 1–8 of 12 inspectors
+                </span>
+
+
+
+                <div class="pagination">
+
+
+                    <button
+                        type="button"
+                        class="prev-page"
+                    >
+
+                        <i class="fa-solid fa-chevron-left"></i>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="page-active"
+                    >
+                        1
+                    </button>
+
+
+                    <button type="button">
+                        2
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="next-page"
+                    >
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+
+<!-- =====================================================
+     ADD INSPECTOR MODAL
+===================================================== -->
+
+<div
+    class="modal-overlay"
+    id="inspectorModal"
+>
+
+
+    <div class="modal">
+
+
+        <button
+            class="modal-close"
+            id="closeInspectorModal"
+            type="button"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div class="modal-icon">
+
+            <i class="fa-solid fa-user-plus"></i>
+
+        </div>
+
+
+        <h2>
+            Add Inspector
+        </h2>
+
+
+        <p>
+            Add a new inspector to the system.
+        </p>
+
+
+
+        <label for="inspectorName">
+            Full Name
+        </label>
+
+        <input
+            type="text"
+            id="inspectorName"
+            placeholder="Enter inspector name"
+        >
+
+
+
+        <label for="inspectorId">
+            Inspector ID
+        </label>
+
+        <input
+            type="text"
+            id="inspectorId"
+            placeholder="e.g. INSP009"
+        >
+
+
+
+        <label for="inspectorRegion">
+            Region
+        </label>
+
+        <select id="inspectorRegion">
+
+            <option value="">
+                Select region
+            </option>
+
+            <option value="Jaipur">
+                Jaipur
+            </option>
+
+            <option value="Udaipur">
+                Udaipur
+            </option>
+
+            <option value="Jodhpur">
+                Jodhpur
+            </option>
+
+            <option value="Kota">
+                Kota
+            </option>
+
+            <option value="Bikaner">
+                Bikaner
+            </option>
+
+            <option value="Ajmer">
+                Ajmer
+            </option>
+
+            <option value="Bharatpur">
+                Bharatpur
+            </option>
+
+            <option value="Alwar">
+                Alwar
+            </option>
+
+        </select>
+
+
+
+        <label for="inspectorStatus">
+            Status
+        </label>
+
+        <select id="inspectorStatus">
+
+            <option value="active">
+                Active
+            </option>
+
+            <option value="onduty">
+                On Duty
+            </option>
+
+            <option value="inactive">
+                Inactive
+            </option>
+
+        </select>
+
+
+
+        <button
+            class="modal-submit"
+            id="saveInspector"
+            type="button"
+        >
+
+            <i class="fa-solid fa-user-check"></i>
+
+            Add Inspector
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     VIEW INSPECTOR MODAL
+===================================================== -->
+
+<div
+    class="modal-overlay"
+    id="viewInspectorModal"
+>
+
+
+    <div class="modal view-modal">
+
+
+        <button
+            class="modal-close"
+            id="closeViewModal"
+            type="button"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div
+            class="large-avatar"
+            id="viewAvatar"
+        >
+            RK
+        </div>
+
+
+        <h2 id="viewName">
+            Ramesh Kumar
+        </h2>
+
+
+        <p id="viewId">
+            INSP001
+        </p>
+
+
+
+        <div class="inspector-details">
+
+
+            <div>
+
+                <span>
+                    Region
+                </span>
+
+                <strong id="viewRegion">
+                    Jaipur
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Status
+                </span>
+
+                <strong id="viewStatus">
+                    Active
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Assigned Inspections
+                </span>
+
+                <strong id="viewAssignments">
+                    4
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Role
+                </span>
+
+                <strong>
+                    Inspector
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <button
+            class="modal-submit"
+            type="button"
+            onclick="closeViewInspector()"
+        >
+
+            Close
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<script src="../js/inspectors.js"></script>
+
+</body>
+</html>

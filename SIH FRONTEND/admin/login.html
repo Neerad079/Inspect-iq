@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="SmartInspect AI — Secure administrative access"
+    >
+
+    <meta
+        name="theme-color"
+        content="#070907"
+    >
+
+    <title>Login | SmartInspect AI</title>
+
+    <!-- =====================================================
+         DESIGN SYSTEM
+         ===================================================== -->
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/login.css">
+
+
+    <!-- =====================================================
+         ICONS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    
+</head>
+
+<body>
+
+    <!-- =====================================================
+         BACKGROUND
+         ===================================================== -->
+
+    <div class="login-bg" aria-hidden="true">
+
+        <div class="login-grid"></div>
+
+        <div class="login-glow login-glow-one"></div>
+
+        <div class="login-glow login-glow-two"></div>
+
+    </div>
+
+
+    <!-- =====================================================
+         LOGIN PAGE
+         ===================================================== -->
+
+    <main class="login-page">
+
+        <div class="login-container">
+
+            <!-- =============================================
+                 BRAND PANEL
+                 ============================================= -->
+
+            <section class="login-brand">
+
+                <div class="brand-pattern"></div>
+
+                <div class="brand-content">
+
+                    <div class="brand-logo">
+
+                        <div class="brand-logo-mark">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+
+                        <div class="brand-name">
+                            SmartInspect <span>AI</span>
+                        </div>
+
+                    </div>
+
+
+                    <h2 class="brand-headline">
+                        Intelligent
+                        <span>institutional</span>
+                        oversight.
+                    </h2>
+
+
+                    <p class="brand-description">
+                        A unified AI-powered governance platform
+                        for inspections, institutional monitoring,
+                        compliance intelligence and real-time
+                        operational visibility.
+                    </p>
+
+                </div>
+
+
+                <div class="system-status">
+
+                    <span
+                        class="system-status-dot"
+                        aria-hidden="true"
+                    ></span>
+
+                    <span class="system-status-text">
+                        Inspection intelligence online
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- =============================================
+                 LOGIN FORM
+                 ============================================= -->
+
+            <section class="login-form-panel">
+
+                <div class="login-form-wrapper">
+
+                    <div class="login-form-header">
+
+                        <h1>
+                            Welcome back
+                        </h1>
+
+                        <p>
+                            Sign in to access the
+                            SmartInspect control room.
+                        </p>
+
+                    </div>
+
+
+                    <form
+                        class="login-form"
+                        id="loginForm"
+                        novalidate
+                    >
+
+                        <!-- Email -->
+
+                        <div class="form-field">
+
+                            <label
+                                class="form-label"
+                                for="email"
+                            >
+                                Email address
+                            </label>
+
+                            <div class="form-input-wrapper">
+
+                                <i
+                                    class="fa-regular fa-envelope form-input-icon"
+                                    aria-hidden="true"
+                                ></i>
+
+                                <input
+                                    class="login-input"
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="admin@smartinspect.ai"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Password -->
+
+                        <div class="form-field">
+
+                            <label
+                                class="form-label"
+                                for="password"
+                            >
+                                Password
+                            </label>
+
+                            <div class="form-input-wrapper">
+
+                                <i
+                                    class="fa-solid fa-lock form-input-icon"
+                                    aria-hidden="true"
+                                ></i>
+
+                                <input
+                                    class="login-input"
+                                    type="password"
+                                    id="password"
+                                    name="password"
+                                    placeholder="Enter your password"
+                                    autocomplete="current-password"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    id="togglePassword"
+                                    aria-label="Show password"
+                                >
+                                    <i
+                                        class="fa-regular fa-eye"
+                                        aria-hidden="true"
+                                    ></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Options -->
+
+                        <div class="login-options">
+
+                            <label class="remember">
+
+                                <input
+                                    type="checkbox"
+                                    id="remember"
+                                    name="remember"
+                                >
+
+                                <span>
+                                    Keep me signed in
+                                </span>
+
+                            </label>
+
+                            <a
+                                href="#"
+                                class="forgot-link"
+                            >
+                                Forgot password?
+                            </a>
+
+                        </div>
+
+
+                        <!-- Submit -->
+
+                        <a  href="pages/dashboard.html"
+                            type="submit"
+                            class="login-button"
+                            id="loginButton"
+                        >
+                             <!-- <a href="/pages/dashboard.html">
+
+                            </a> -->
+
+                            <span>
+                                Access Control Room
+                            </span>
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                                aria-hidden="true"
+                            ></i>
+
+                        </a>
+
+                         <!-- Back -->
+
+            <a href="../index.html"
+               class="back-home">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back to SmartInspect AI
+
+            </a>
+
+                    </form>
+
+
+                    <!-- Security -->
+
+                    <div class="security-note">
+
+                        <i
+                            class="fa-solid fa-shield-halved"
+                            aria-hidden="true"
+                        ></i>
+
+                        <span>
+                            Protected administrative environment.
+                            Your session is secured through
+                            server-side authentication and
+                            encrypted communication.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+
+    <script>
+
+        "use strict";
+
+        const passwordInput =
+            document.getElementById("password");
+
+        const togglePassword =
+            document.getElementById("togglePassword");
+
+        const loginForm =
+            document.getElementById("loginForm");
+
+        /* -----------------------------------------------
+           Password visibility
+           ----------------------------------------------- */
+
+        togglePassword.addEventListener(
+            "click",
+            () => {
+
+                const isPassword =
+                    passwordInput.type === "password";
+
+                passwordInput.type =
+                    isPassword
+                        ? "text"
+                        : "password";
+
+                togglePassword.innerHTML =
+                    isPassword
+                        ? '<i class="fa-regular fa-eye-slash"></i>'
+                        : '<i class="fa-regular fa-eye"></i>';
+
+                togglePassword.setAttribute(
+                    "aria-label",
+                    isPassword
+                        ? "Hide password"
+                        : "Show password"
+                );
+            }
+        );
+
+
+        /* -----------------------------------------------
+           Login form foundation
+           
+           Authentication API integration should be
+           connected later to /api/auth/login.
+           ----------------------------------------------- */
+
+        loginForm.addEventListener(
+            "submit",
+            async event => {
+
+                event.preventDefault();
+
+                const email =
+                    document.getElementById("email")
+                        .value
+                        .trim();
+
+                const password =
+                    passwordInput.value;
+
+                if (!email) {
+                    document
+                        .getElementById("email")
+                        .focus();
+
+                    return;
+                }
+
+                if (!password) {
+                    passwordInput.focus();
+
+                    return;
+                }
+
+                /*
+                 * Backend authentication will be
+                 * connected in the next phase.
+                 *
+                 * Example:
+                 *
+                 * await apiPost(
+                 *     "/auth/login",
+                 *     { email, password }
+                 * );
+                 */
+
+                console.info(
+                    "Login form ready for API integration."
+                );
+            }
+        );
+
+    </script>
+
+</body>
+</html>

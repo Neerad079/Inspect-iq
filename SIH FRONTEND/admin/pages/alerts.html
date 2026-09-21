@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Alerts | SmartInspect AI</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Alerts CSS -->
+    <link rel="stylesheet" href="../css/alerts.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         SIDEBAR
+         SAME STRUCTURE AS INSPECTIONS PAGE
+         ===================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <!-- Logo -->
+        <div class="logo-area">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <div class="logo-text">
+                SmartInspect <b>AI</b>
+            </div>
+
+
+            <!-- Mobile Close -->
+            <button
+                class="close-sidebar"
+                id="closeSidebar"
+                type="button"
+                aria-label="Close menu"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <!-- Navigation -->
+        <nav class="navigation">
+
+            <a
+                href="dashboard.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+
+            <a
+                href="institutions.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-building"></i>
+                <span>Institutions</span>
+            </a>
+
+
+            <a
+                href="inspections.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-clipboard-check"></i>
+                <span>Inspections</span>
+            </a>
+
+
+            <!-- ACTIVE -->
+            <a
+                href="alerts.html"
+                class="nav-item active"
+            >
+                <i class="fa-solid fa-bell"></i>
+                <span>Alerts</span>
+            </a>
+
+
+            <a
+                href="reports.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Reports</span>
+            </a>
+
+
+            <a
+                href="inspectors.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-user-shield"></i>
+                <span>Inspectors</span>
+            </a>
+
+
+            <a
+                href="settings.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <!-- Admin Profile -->
+        <div class="admin-profile">
+
+            <div class="profile-image">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="profile-info">
+
+                <strong>Admin</strong>
+
+                <small>
+                    Administrator
+                </small>
+
+            </div>
+
+            <i
+                class="fa-solid fa-chevron-right profile-arrow"
+            ></i>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         SIDEBAR OVERLAY
+         ===================================================== -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             MOBILE HEADER
+             ================================================= -->
+
+        <header class="mobile-header">
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                type="button"
+                aria-label="Open menu"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+
+            <div class="mobile-brand">
+                SmartInspect <span>AI</span>
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             PAGE HEADER
+             ================================================= -->
+
+        <section class="page-header">
+
+
+            <div class="header-left">
+
+                <div class="page-icon">
+                    <i class="fa-solid fa-bell"></i>
+                </div>
+
+
+                <div>
+
+                    <h1>
+                        AI Alerts
+                    </h1>
+
+                    <p>
+                        Your AI-driven, AI-generated alerts
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Filters -->
+            <div class="filter-area">
+
+                <select
+                    id="severityFilter"
+                    class="filter-select"
+                >
+
+                    <option value="all">
+                        All Severity
+                    </option>
+
+                    <option value="high">
+                        High Severity
+                    </option>
+
+                    <option value="medium">
+                        Medium Severity
+                    </option>
+
+                    <option value="low">
+                        Low Severity
+                    </option>
+
+                </select>
+
+
+                <select
+                    id="typeFilter"
+                    class="filter-select"
+                >
+
+                    <option value="all">
+                        All Types
+                    </option>
+
+                    <option value="risk">
+                        Risk Alert
+                    </option>
+
+                    <option value="attendance">
+                        Attendance
+                    </option>
+
+                    <option value="security">
+                        Security
+                    </option>
+
+                    <option value="cctv">
+                        CCTV
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ALERT STATISTICS
+             ================================================= -->
+
+        <section class="stats-grid">
+
+
+            <!-- Total -->
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    <i class="fa-solid fa-bell"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        Total Alerts
+                    </span>
+
+                    <strong id="totalCount">
+                        5
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- High -->
+            <div class="stat-card">
+
+                <div class="stat-icon red">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        High Risk
+                    </span>
+
+                    <strong id="highCount">
+                        2
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- Medium -->
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        Medium Risk
+                    </span>
+
+                    <strong id="mediumCount">
+                        2
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- New -->
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        Recent Alerts
+                    </span>
+
+                    <strong id="recentCount">
+                        4
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ALERT PANEL
+             ================================================= -->
+
+        <section class="alerts-panel">
+
+
+            <!-- Panel Header -->
+            <div class="panel-top">
+
+                <div>
+
+                    <h2>
+                        AI Generated Alerts
+                    </h2>
+
+                    <p>
+                        Monitor risk signals and institutional anomalies
+                    </p>
+
+                </div>
+
+
+                <!-- Search -->
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search alerts..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 ALERT LIST
+                 ================================================= -->
+
+            <div
+                class="alerts-list"
+                id="alertsList"
+            >
+
+
+                <!-- =================================================
+                     ALERT 1
+                     ================================================= -->
+
+                <article
+                    class="alert-card high"
+                    data-severity="high"
+                    data-type="risk"
+                    data-search="high risk institution XYZ Institute Ajmer Rajasthan attendance anomaly multiple complaints pressure management concern"
+                >
+
+
+                    <div class="alert-main">
+
+
+                        <div class="alert-icon high-icon">
+
+                            <i
+                                class="fa-solid fa-triangle-exclamation"
+                            ></i>
+
+                        </div>
+
+
+                        <div class="alert-content">
+
+                            <div class="alert-heading">
+
+                                <h3>
+                                    High Risk Institution
+                                </h3>
+
+                                <span class="severity-badge high-badge">
+                                    HIGH
+                                </span>
+
+                            </div>
+
+
+                            <p class="institution">
+                                XYZ Institute · Ajmer, Rajasthan
+                            </p>
+
+
+                            <div class="risk-score">
+
+                                Risk Score:
+
+                                <strong>
+                                    78/100
+                                </strong>
+
+                            </div>
+
+
+                            <span class="reason-label">
+                                Reason
+                            </span>
+
+
+                            <ul class="reasons">
+
+                                <li>
+                                    Attendance anomaly
+                                </li>
+
+                                <li>
+                                    Multiple complaints
+                                </li>
+
+                                <li>
+                                    Pressure management concern
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="alert-actions">
+
+                        <span class="alert-time">
+                            2 hours ago
+                        </span>
+
+
+                        <button
+                            class="view-institution"
+                            type="button"
+                            data-institution="XYZ Institute"
+                            data-location="Ajmer, Rajasthan"
+                            data-score="78"
+                        >
+
+                            View Institution
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                            ></i>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     ALERT 2
+                     ================================================= -->
+
+                <article
+                    class="alert-card medium"
+                    data-severity="medium"
+                    data-type="attendance"
+                    data-search="medium risk institution LMN School Udaipur Rajasthan irregular attendance recent complaints infrastructure issues"
+                >
+
+
+                    <div class="alert-main">
+
+                        <div class="alert-icon medium-icon">
+
+                            <i
+                                class="fa-solid fa-triangle-exclamation"
+                            ></i>
+
+                        </div>
+
+
+                        <div class="alert-content">
+
+                            <div class="alert-heading">
+
+                                <h3>
+                                    Medium Risk Institution
+                                </h3>
+
+                                <span class="severity-badge medium-badge">
+                                    MEDIUM
+                                </span>
+
+                            </div>
+
+
+                            <p class="institution">
+                                LMN School · Udaipur, Rajasthan
+                            </p>
+
+
+                            <div class="risk-score">
+
+                                Risk Score:
+
+                                <strong>
+                                    54/100
+                                </strong>
+
+                            </div>
+
+
+                            <span class="reason-label">
+                                Reason
+                            </span>
+
+
+                            <ul class="reasons">
+
+                                <li>
+                                    Irregular attendance
+                                </li>
+
+                                <li>
+                                    Recent complaints
+                                </li>
+
+                                <li>
+                                    Infrastructure issues
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="alert-actions">
+
+                        <span class="alert-time">
+                            5 hours ago
+                        </span>
+
+
+                        <button
+                            class="view-institution"
+                            type="button"
+                            data-institution="LMN School"
+                            data-location="Udaipur, Rajasthan"
+                            data-score="54"
+                        >
+
+                            View Institution
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                            ></i>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     ALERT 3
+                     ================================================= -->
+
+                <article
+                    class="alert-card high"
+                    data-severity="high"
+                    data-type="security"
+                    data-search="high risk institution STU University Bikaner Rajasthan CCTV anomaly security incidents non compliance"
+                >
+
+
+                    <div class="alert-main">
+
+                        <div class="alert-icon high-icon">
+
+                            <i
+                                class="fa-solid fa-triangle-exclamation"
+                            ></i>
+
+                        </div>
+
+
+                        <div class="alert-content">
+
+                            <div class="alert-heading">
+
+                                <h3>
+                                    High Risk Institution
+                                </h3>
+
+                                <span class="severity-badge high-badge">
+                                    HIGH
+                                </span>
+
+                            </div>
+
+
+                            <p class="institution">
+                                STU University · Bikaner, Rajasthan
+                            </p>
+
+
+                            <div class="risk-score">
+
+                                Risk Score:
+
+                                <strong>
+                                    72/100
+                                </strong>
+
+                            </div>
+
+
+                            <span class="reason-label">
+                                Reason
+                            </span>
+
+
+                            <ul class="reasons">
+
+                                <li>
+                                    CCTV anomaly detected
+                                </li>
+
+                                <li>
+                                    Multiple security incidents
+                                </li>
+
+                                <li>
+                                    Non-compliance
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="alert-actions">
+
+                        <span class="alert-time">
+                            1 day ago
+                        </span>
+
+
+                        <button
+                            class="view-institution"
+                            type="button"
+                            data-institution="STU University"
+                            data-location="Bikaner, Rajasthan"
+                            data-score="72"
+                        >
+
+                            View Institution
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                            ></i>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     ALERT 4
+                     ================================================= -->
+
+                <article
+                    class="alert-card medium"
+                    data-severity="medium"
+                    data-type="cctv"
+                    data-search="CCTV offline QRS College Jaipur Rajasthan cameras offline 24 hours"
+                >
+
+
+                    <div class="alert-main">
+
+                        <div class="alert-icon medium-icon">
+
+                            <i
+                                class="fa-solid fa-video-slash"
+                            ></i>
+
+                        </div>
+
+
+                        <div class="alert-content">
+
+                            <div class="alert-heading">
+
+                                <h3>
+                                    CCTV Offline
+                                </h3>
+
+                                <span class="severity-badge medium-badge">
+                                    MEDIUM
+                                </span>
+
+                            </div>
+
+
+                            <p class="institution">
+                                QRS College · Jaipur, Rajasthan
+                            </p>
+
+
+                            <p class="description">
+                                CCTV cameras have been offline
+                                for more than 24 hours.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="alert-actions">
+
+                        <span class="alert-time">
+                            1 day ago
+                        </span>
+
+
+                        <button
+                            class="view-institution"
+                            type="button"
+                            data-institution="QRS College"
+                            data-location="Jaipur, Rajasthan"
+                            data-score="61"
+                        >
+
+                            View Institution
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                            ></i>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     ALERT 5
+                     ================================================= -->
+
+                <article
+                    class="alert-card low"
+                    data-severity="low"
+                    data-type="security"
+                    data-search="low risk institution ABC Institute Jodhpur Rajasthan minor security issue"
+                >
+
+
+                    <div class="alert-main">
+
+                        <div class="alert-icon low-icon">
+
+                            <i
+                                class="fa-solid fa-circle-info"
+                            ></i>
+
+                        </div>
+
+
+                        <div class="alert-content">
+
+                            <div class="alert-heading">
+
+                                <h3>
+                                    Low Risk Institution
+                                </h3>
+
+                                <span class="severity-badge low-badge">
+                                    LOW
+                                </span>
+
+                            </div>
+
+
+                            <p class="institution">
+                                ABC Institute · Jodhpur, Rajasthan
+                            </p>
+
+
+                            <div class="risk-score">
+
+                                Risk Score:
+
+                                <strong>
+                                    28/100
+                                </strong>
+
+                            </div>
+
+
+                            <span class="reason-label">
+                                Reason
+                            </span>
+
+
+                            <ul class="reasons">
+
+                                <li>
+                                    Minor security issue
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="alert-actions">
+
+                        <span class="alert-time">
+                            2 days ago
+                        </span>
+
+
+                        <button
+                            class="view-institution"
+                            type="button"
+                            data-institution="ABC Institute"
+                            data-location="Jodhpur, Rajasthan"
+                            data-score="28"
+                        >
+
+                            View Institution
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                            ></i>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 EMPTY STATE
+                 ================================================= -->
+
+            <div
+                class="empty-state"
+                id="emptyState"
+            >
+
+                <i
+                    class="fa-solid fa-bell-slash"
+                ></i>
+
+                <h3>
+                    No alerts found
+                </h3>
+
+                <p>
+                    Try changing your search or filters.
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PAGINATION
+                 ================================================= -->
+
+            <div class="pagination">
+
+                <span id="paginationText">
+                    Showing 5 of 5 alerts
+                </span>
+
+
+                <div class="pagination-buttons">
+
+                    <button
+                        class="page-btn disabled"
+                        type="button"
+                    >
+                        <i
+                            class="fa-solid fa-chevron-left"
+                        ></i>
+                    </button>
+
+
+                    <button
+                        class="page-btn active"
+                        type="button"
+                    >
+                        1
+                    </button>
+
+
+                    <button
+                        class="page-btn disabled"
+                        type="button"
+                    >
+                        <i
+                            class="fa-solid fa-chevron-right"
+                        ></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         INSTITUTION MODAL
+         ===================================================== -->
+
+    <div
+        class="alert-modal"
+        id="alertModal"
+    >
+
+        <div class="modal-content">
+
+
+            <button
+                class="modal-close"
+                id="modalClose"
+                type="button"
+                aria-label="Close"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+
+            <div class="modal-icon">
+                <i class="fa-solid fa-building"></i>
+            </div>
+
+
+            <h2 id="modalInstitution">
+                Institution
+            </h2>
+
+
+            <p id="modalLocation">
+                Location
+            </p>
+
+
+            <div class="modal-risk">
+
+                <span>
+                    Current Risk Score
+                </span>
+
+                <strong id="modalScore">
+                    0/100
+                </strong>
+
+            </div>
+
+
+            <button
+                class="modal-open-btn"
+                id="modalOpenBtn"
+                type="button"
+            >
+                Open Institution
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Alerts JS -->
+    <script src="../js/alerts.js"></script>
+
+</body>
+
+</html>

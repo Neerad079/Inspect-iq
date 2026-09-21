@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartInspect AI - Institutions</title>
+
+     <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="../css/institutions.css">
+</head>
+
+<body>
+
+<div class="app">
+
+
+
+
+<!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="logo-area">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <div class="logo-text">
+                <span>SmartInspect</span>
+                <b>AI</b>
+            </div>
+
+            <button class="close-sidebar" id="closeSidebarBtn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="navigation">
+
+            <a href="dashboard.html" class="nav-item ">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="institutions.html" class="nav-item active">
+                <i class="fa-solid fa-building"></i>
+                <span>Institutions</span>
+            </a>
+
+            <a href="inspections.html" class="nav-item">
+                <i class="fa-solid fa-clipboard-check"></i>
+                <span>Inspections</span>
+            </a>
+
+            <a href="alerts.html" class="nav-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Alerts</span>
+            </a>
+
+            <a href="reports.html" class="nav-item">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Reports</span>
+            </a>
+
+            <a href="inspectors.html" class="nav-item">
+                <i class="fa-solid fa-user-shield"></i>
+                <span>Inspectors</span>
+            </a>
+
+            <a href="settings.html" class="nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <!-- Admin Profile -->
+
+        <div class="admin-profile">
+
+            <div class="profile-image">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="profile-info">
+                <strong>Admin</strong>
+                <small>Administrator</small>
+            </div>
+
+            <i class="fa-solid fa-chevron-right profile-arrow"></i>
+
+        </div>
+
+    </aside>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- MOBILE HEADER -->
+        <header class="mobile-header">
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+
+            <div class="mobile-brand">
+                SmartInspect <b>AI</b>
+            </div>
+
+        </header>
+
+
+        <!-- ================= TOP BAR ================= -->
+
+        <section class="top-bar">
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search institutions..."
+                >
+
+            </div>
+
+
+            <!-- ADD BUTTON -->
+
+            <button class="add-btn" id="openModalBtn">
+
+                <span>+</span>
+                Add Institution
+
+            </button>
+
+        </section>
+
+
+        <!-- ================= PAGE HEADER ================= -->
+
+        <section class="page-header">
+
+            <div>
+
+                <h1>Institutions</h1>
+
+                <p>
+                    View and manage all educational institutions
+                </p>
+
+            </div>
+
+
+            <!-- FILTERS -->
+
+            <div class="filters">
+
+                <select id="statusFilter">
+
+                    <option value="all">
+                        All Status
+                    </option>
+
+                    <option value="normal">
+                        Normal
+                    </option>
+
+                    <option value="attention">
+                        Attention
+                    </option>
+
+                </select>
+
+
+                <select id="riskFilter">
+
+                    <option value="all">
+                        All Risk Levels
+                    </option>
+
+                    <option value="low">
+                        Low Risk
+                    </option>
+
+                    <option value="medium">
+                        Medium Risk
+                    </option>
+
+                    <option value="high">
+                        High Risk
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= INSTITUTION CARDS ================= -->
+
+        <section class="institution-grid" id="institutionGrid">
+
+            <!-- Cards are generated by JavaScript -->
+
+        </section>
+
+
+        <!-- ================= EMPTY STATE ================= -->
+
+        <div class="empty-state" id="emptyState">
+
+            <div class="empty-icon">
+                ▦
+            </div>
+
+            <h2>No institutions found</h2>
+
+            <p>
+                Try changing your search or filters.
+            </p>
+
+        </div>
+
+
+        <!-- ================= PAGINATION ================= -->
+
+        <div class="pagination">
+
+            <button class="page-btn">
+                ‹
+            </button>
+
+            <button class="page-btn active-page">
+                1
+            </button>
+
+            <button class="page-btn">
+                2
+            </button>
+
+            <button class="page-btn">
+                3
+            </button>
+
+            <span>...</span>
+
+            <button class="page-btn">
+                21
+            </button>
+
+            <button class="page-btn">
+                ›
+            </button>
+
+        </div>
+
+
+        <!-- =========================================================
+             INSTITUTION DETAILS - SAME PAGE
+        ========================================================== -->
+        <section class="institution-details" id="institutionDetails" aria-hidden="true">
+
+            <div class="detail-topbar">
+                <div class="detail-breadcrumb">
+                    <button type="button" id="backToInstitutions" aria-label="Back to institutions">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <span>Institutions</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <strong id="detailBreadcrumb">ABC College</strong>
+                </div>
+
+                <button type="button" class="detail-edit-btn" id="detailEditBtn">
+                    <i class="fa-solid fa-pen"></i>
+                    <span>Edit</span>
+                </button>
+            </div>
+
+            <div class="detail-profile">
+                <div class="detail-cover-image">
+                    <img id="detailCollegeImage"
+                         src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=900&q=80"
+                         alt="Institution">
+                </div>
+
+                <div class="detail-profile-info">
+                    <div class="detail-title-row">
+                        <h1 id="detailCollegeName">ABC College</h1>
+                        <span class="detail-verified">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Verified
+                        </span>
+                    </div>
+
+                    <p class="detail-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span id="detailLocation">Jaipur, Rajasthan</span>
+                    </p>
+
+                    <div class="detail-info-grid">
+                        <div>
+                            <span>Principal</span>
+                            <strong id="detailPrincipal">Dr. Rajnish Sharma</strong>
+                        </div>
+                        <div>
+                            <span>Established</span>
+                            <strong id="detailEstablished">2005</strong>
+                        </div>
+                        <div>
+                            <span>Total Students</span>
+                            <strong id="detailStudents">1,300</strong>
+                        </div>
+                        <div>
+                            <span>Total Staff</span>
+                            <strong id="detailStaff">60</strong>
+                        </div>
+                        <div>
+                            <span>Contact</span>
+                            <strong id="detailContact">abc@college.edu.in</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="detail-map-btn">
+                    <i class="fa-solid fa-location-dot"></i>
+                    View on Map
+                </button>
+            </div>
+
+            <div class="detail-tabs" role="tablist">
+                <button type="button" class="detail-tab active" data-tab="overview">Overview</button>
+                <button type="button" class="detail-tab" data-tab="attendance">Attendance</button>
+                <button type="button" class="detail-tab" data-tab="inspections">Inspections</button>
+                <button type="button" class="detail-tab" data-tab="complaints">Complaints</button>
+                <button type="button" class="detail-tab" data-tab="evidence">Evidence</button>
+                <button type="button" class="detail-tab" data-tab="ai">AI Analysis</button>
+            </div>
+
+            <!-- Summary cards -->
+            <div class="detail-stat-grid">
+                <article class="detail-stat-card">
+                    <div class="detail-stat-icon attendance">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div class="detail-stat-content">
+                        <span>Attendance</span>
+                        <strong id="detailAttendance">91%</strong>
+                        <small>Overall Average</small>
+                    </div>
+                    <div class="detail-stat-change positive">
+                        <b>▲ 5%</b>
+                        <small>vs last week</small>
+                    </div>
+                </article>
+
+                <article class="detail-stat-card">
+                    <div class="detail-stat-icon inspection">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                    </div>
+                    <div class="detail-stat-content">
+                        <span>Inspections</span>
+                        <strong>12</strong>
+                        <small>Total Inspections</small>
+                    </div>
+                    <div class="detail-stat-change positive">
+                        <b>▲ 2</b>
+                        <small>this month</small>
+                    </div>
+                </article>
+
+                <article class="detail-stat-card">
+                    <div class="detail-stat-icon complaint">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <div class="detail-stat-content">
+                        <span>Complaints</span>
+                        <strong>3</strong>
+                        <small>Open Complaints</small>
+                    </div>
+                    <div class="detail-stat-change negative">
+                        <b>▲ 1</b>
+                        <small>vs last month</small>
+                    </div>
+                </article>
+
+                <article class="detail-stat-card">
+                    <div class="detail-stat-icon evidence">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+                    <div class="detail-stat-content">
+                        <span>Evidence</span>
+                        <strong>48</strong>
+                        <small>Total Evidence</small>
+                    </div>
+                    <div class="detail-stat-change positive">
+                        <b>▲ 12</b>
+                        <small>this month</small>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Graph / status row -->
+            <div class="detail-dashboard-grid">
+
+                <article class="detail-card attendance-detail-card">
+                    <div class="detail-card-heading">
+                        <div>
+                            <i class="fa-solid fa-chart-column"></i>
+                            <h3>Attendance Trend</h3>
+                        </div>
+                        <select>
+                            <option>Last 7 Days</option>
+                            <option>Last 30 Days</option>
+                            <option>Last 3 Months</option>
+                        </select>
+                    </div>
+
+                    <div class="detail-bar-chart">
+                        <div class="detail-y-axis">
+                            <span>100%</span><span>75%</span><span>50%</span><span>25%</span><span>0%</span>
+                        </div>
+                        <div class="detail-bars">
+                            <div class="detail-bar-item"><div class="detail-bar" style="height:76%"></div><span>Mon</span></div>
+                            <div class="detail-bar-item"><div class="detail-bar" style="height:68%"></div><span>Tue</span></div>
+                            <div class="detail-bar-item"><div class="detail-bar" style="height:78%"></div><span>Wed</span></div>
+                            <div class="detail-bar-item"><div class="detail-bar" style="height:72%"></div><span>Thu</span></div>
+                            <div class="detail-bar-item"><div class="detail-bar" style="height:64%"></div><span>Fri</span></div>
+                            <div class="detail-bar-item"><div class="detail-bar" style="height:57%"></div><span>Sat</span></div>
+                            <div class="detail-bar-item"><div class="detail-bar" style="height:74%"></div><span>Sun</span></div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="detail-card">
+                    <div class="detail-card-heading">
+                        <div>
+                            <i class="fa-solid fa-calendar-check"></i>
+                            <h3>Inspection Status</h3>
+                        </div>
+                    </div>
+
+                    <div class="detail-inspection-status">
+                        <div class="detail-donut">
+                            <div>
+                                <strong>12</strong>
+                                <span>Total</span>
+                            </div>
+                        </div>
+
+                        <div class="detail-status-list">
+                            <div><i class="completed"></i><span>Completed</span><b>8</b></div>
+                            <div><i class="progress"></i><span>In Progress</span><b>2</b></div>
+                            <div><i class="scheduled"></i><span>Scheduled</span><b>1</b></div>
+                            <div><i class="overdue"></i><span>Overdue</span><b>1</b></div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="detail-card complaints-detail-card">
+                    <div class="detail-card-heading">
+                        <div>
+                            <i class="fa-solid fa-chart-line"></i>
+                            <h3>Complaints Overview</h3>
+                        </div>
+                        <select>
+                            <option>Last 30 Days</option>
+                            <option>Last 3 Months</option>
+                        </select>
+                    </div>
+
+                    <div class="detail-line-chart">
+                        <div class="line-grid"></div>
+                        <svg viewBox="0 0 500 180" preserveAspectRatio="none" aria-label="Complaints graph">
+                            <polyline points="0,140 60,125 120,130 180,100 240,110 300,92 360,95 420,110 490,85"
+                                      fill="none" stroke="#ff4d6d" stroke-width="4"/>
+                            <polyline points="0,155 60,150 120,160 180,145 240,140 300,145 360,142 420,155 490,148"
+                                      fill="none" stroke="#39e77a" stroke-width="4"/>
+                        </svg>
+                    </div>
+                    <div class="detail-chart-labels">
+                        <span>Aug 10</span><span>Aug 17</span><span>Aug 24</span><span>Aug 31</span>
+                    </div>
+                    <div class="detail-chart-legend">
+                        <span><i class="open-dot"></i>Open</span>
+                        <span><i class="resolved-dot"></i>Resolved</span>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Bottom row -->
+            <div class="detail-bottom-grid">
+
+                <article class="detail-card ai-detail-card">
+                    <div class="detail-card-heading">
+                        <div>
+                            <i class="fa-solid fa-brain"></i>
+                            <h3>AI Analysis</h3>
+                        </div>
+                        <span class="detail-risk-badge">
+                            <i class="fa-solid fa-circle-check"></i> Low Risk
+                        </span>
+                    </div>
+
+                    <p>Attendance is consistent and no major anomalies were found.</p>
+
+                    <div class="ai-detail-points">
+                        <div><i class="fa-solid fa-circle-check"></i> Stable attendance pattern</div>
+                        <div><i class="fa-solid fa-circle-check"></i> Minimal complaints</div>
+                        <div><i class="fa-solid fa-circle-check"></i> Good infrastructure</div>
+                        <div><i class="fa-solid fa-circle-check"></i> No critical issues detected</div>
+                    </div>
+
+                    <button type="button" class="detail-analysis-btn">
+                        View Detailed Analysis <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </article>
+
+                <article class="detail-card">
+                    <div class="detail-card-heading">
+                        <div>
+                            <i class="fa-solid fa-clipboard-list"></i>
+                            <h3>Recent Inspections</h3>
+                        </div>
+                        <a href="#">View All</a>
+                    </div>
+
+                    <div class="recent-detail-list">
+                        <div class="recent-detail-row">
+                            <div class="recent-icon"><i class="fa-solid fa-file-lines"></i></div>
+                            <div><strong>12 Sep 2026</strong><span>Inspector: Rahul Mehta</span></div>
+                            <b class="completed-label">Completed</b>
+                        </div>
+                        <div class="recent-detail-row">
+                            <div class="recent-icon"><i class="fa-solid fa-file-lines"></i></div>
+                            <div><strong>03 Sep 2026</strong><span>Inspector: Anita Singh</span></div>
+                            <b class="completed-label">Completed</b>
+                        </div>
+                        <div class="recent-detail-row">
+                            <div class="recent-icon"><i class="fa-solid fa-file-lines"></i></div>
+                            <div><strong>14 Aug 2026</strong><span>Inspector: Neeraj Verma</span></div>
+                            <b class="progress-label">In Progress</b>
+                        </div>
+                        <div class="recent-detail-row">
+                            <div class="recent-icon"><i class="fa-solid fa-file-lines"></i></div>
+                            <div><strong>28 Jul 2026</strong><span>Inspector: Priya Sharma</span></div>
+                            <b class="completed-label">Completed</b>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="detail-card detail-location-card">
+                    <div class="detail-card-heading">
+                        <div>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <h3>Location</h3>
+                        </div>
+                    </div>
+
+                    <div class="detail-fake-map">
+                        <div class="detail-map-lines"></div>
+                        <div class="detail-map-pin">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <strong id="detailMapName">ABC College</strong>
+                        </div>
+                    </div>
+
+                    <button type="button" class="detail-google-map-btn">
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                        View on Google Map
+                    </button>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+</div>
+
+
+
+<!-- ========================================================= -->
+<!--                    ADD INSTITUTION MODAL                  -->
+<!-- ========================================================= -->
+
+<div class="modal-overlay" id="institutionModal">
+
+    <div class="modal">
+
+        <!-- MODAL HEADER -->
+
+        <div class="modal-header">
+
+            <div>
+
+                <h2>Add Institution</h2>
+
+                <p>
+                    Register a new educational institution
+                </p>
+
+            </div>
+
+            <button
+                class="close-modal"
+                id="closeModalBtn"
+                type="button"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <form id="institutionForm">
+
+            <!-- IMAGE -->
+
+            <div class="image-upload-section">
+
+                <label>
+                    Institution Image
+                </label>
+
+                <div class="image-upload">
+
+                    <div
+                        class="image-preview"
+                        id="imagePreview"
+                    >
+                        <span>+</span>
+                        <small>
+                            Upload
+                        </small>
+                    </div>
+
+                    <div class="upload-content">
+
+                        <strong>
+                            Upload institution image
+                        </strong>
+
+                        <p>
+                            PNG, JPG or WEBP
+                        </p>
+
+                        <label
+                            class="upload-btn"
+                            for="institutionImage"
+                        >
+                            Choose Image
+                        </label>
+
+                        <input
+                            type="file"
+                            id="institutionImage"
+                            accept="image/png,image/jpeg,image/webp"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FORM GRID -->
+
+            <div class="form-grid">
+
+                <!-- NAME -->
+
+                <div class="form-group full">
+
+                    <label for="institutionName">
+                        Institution Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="institutionName"
+                        placeholder="Enter institution name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- LOCATION -->
+
+                <div class="form-group">
+
+                    <label for="institutionCity">
+                        City
+                    </label>
+
+                    <input
+                        type="text"
+                        id="institutionCity"
+                        placeholder="e.g. Jaipur"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="institutionState">
+                        State
+                    </label>
+
+                    <input
+                        type="text"
+                        id="institutionState"
+                        placeholder="e.g. Rajasthan"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- ATTENDANCE -->
+
+                <div class="form-group">
+
+                    <label for="attendance">
+                        Attendance %
+                    </label>
+
+                    <input
+                        type="number"
+                        id="attendance"
+                        min="0"
+                        max="100"
+                        placeholder="e.g. 85"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- STATUS -->
+
+                <div class="form-group">
+
+                    <label for="institutionStatus">
+                        Status
+                    </label>
+
+                    <select id="institutionStatus">
+
+                        <option value="normal">
+                            Normal
+                        </option>
+
+                        <option value="attention">
+                            Attention
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- RISK -->
+
+                <div class="form-group">
+
+                    <label for="institutionRisk">
+                        Risk Level
+                    </label>
+
+                    <select id="institutionRisk">
+
+                        <option value="low">
+                            Low Risk
+                        </option>
+
+                        <option value="medium">
+                            Medium Risk
+                        </option>
+
+                        <option value="high">
+                            High Risk
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- INSPECTION DATE -->
+
+                <div class="form-group">
+
+                    <label for="inspectionDate">
+                        Last Inspection
+                    </label>
+
+                    <input
+                        type="date"
+                        id="inspectionDate"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- MODAL ACTIONS -->
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="cancel-btn"
+                    id="cancelBtn"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="submit"
+                    class="save-btn"
+                >
+                    <span>+</span>
+                    Add Institution
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="../js/institutions.js"></script>
+
+</body>
+</html>

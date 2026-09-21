@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inspections | SmartInspect AI</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Inspections CSS -->
+    <link rel="stylesheet" href="../css/inspections.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="logo-area">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <div class="logo-text">
+                SmartInspect <b>AI</b>
+            </div>
+
+            <!-- Mobile Close Button -->
+            <button
+                class="close-sidebar"
+                id="closeSidebar"
+                type="button"
+                aria-label="Close menu"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <!-- Navigation -->
+        <nav class="navigation">
+
+            <a href="dashboard.html" class="nav-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="institutions.html" class="nav-item">
+                <i class="fa-solid fa-building"></i>
+                <span>Institutions</span>
+            </a>
+
+            <a href="inspections.html" class="nav-item active">
+                <i class="fa-solid fa-clipboard-check"></i>
+                <span>Inspections</span>
+            </a>
+
+            <a href="alerts.html" class="nav-item">
+                <i class="fa-solid fa-bell"></i>
+                <span>Alerts</span>
+            </a>
+
+            <a href="reports.html" class="nav-item">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Reports</span>
+            </a>
+
+            <a href="inspectors.html" class="nav-item">
+                <i class="fa-solid fa-user-shield"></i>
+                <span>Inspectors</span>
+            </a>
+
+            <a href="settings.html" class="nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <!-- Admin Profile -->
+        <div class="admin-profile">
+
+            <div class="profile-image">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="profile-info">
+                <strong>Admin</strong>
+                <small>Administrator</small>
+            </div>
+
+            <i class="fa-solid fa-chevron-right profile-arrow"></i>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Sidebar Overlay -->
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="main-content">
+
+
+        <!-- Mobile Header -->
+        <header class="mobile-header">
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                type="button"
+                aria-label="Open menu"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="mobile-brand">
+                SmartInspect <span>AI</span>
+            </div>
+
+        </header>
+
+
+        <!-- ================= PAGE HEADER ================= -->
+        <section class="page-header">
+
+            <div class="header-left">
+
+                <div class="page-icon">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                </div>
+
+                <div>
+                    <h1>Inspection Management</h1>
+
+                    <p>
+                        View all inspections and generate surprise inspections
+                    </p>
+                </div>
+
+            </div>
+
+
+            <button
+                class="generate-btn"
+                id="generateBtn"
+                type="button"
+            >
+                <i class="fa-solid fa-bolt"></i>
+                Generate Surprise Inspection
+            </button>
+
+        </section>
+
+
+        <!-- ================= STATS ================= -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                </div>
+
+                <div>
+                    <span>Total Inspections</span>
+                    <strong id="totalCount">3</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+
+                <div>
+                    <span>In Progress</span>
+                    <strong id="progressCount">1</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <div>
+                    <span>Completed</span>
+                    <strong id="completedCount">1</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon red">
+                    <i class="fa-solid fa-hourglass-half"></i>
+                </div>
+
+                <div>
+                    <span>Pending</span>
+                    <strong id="pendingCount">1</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= INSPECTION PANEL ================= -->
+        <section class="inspection-panel">
+
+
+            <!-- Panel Header -->
+            <div class="panel-top">
+
+                <div>
+                    <h2>All Inspections</h2>
+
+                    <p>
+                        Manage and track institutional inspections
+                    </p>
+                </div>
+
+
+                <!-- Search -->
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search inspections..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= TABS ================= -->
+            <div class="tabs">
+
+                <button
+                    class="tab active"
+                    data-filter="all"
+                    type="button"
+                >
+                    All
+                    <span>3</span>
+                </button>
+
+                <button
+                    class="tab"
+                    data-filter="pending"
+                    type="button"
+                >
+                    Pending
+                    <span>1</span>
+                </button>
+
+                <button
+                    class="tab"
+                    data-filter="progress"
+                    type="button"
+                >
+                    In Progress
+                    <span>1</span>
+                </button>
+
+                <button
+                    class="tab"
+                    data-filter="completed"
+                    type="button"
+                >
+                    Completed
+                    <span>1</span>
+                </button>
+
+            </div>
+
+
+            <!-- ================= TABLE ================= -->
+            <div class="table-wrapper">
+
+                <table id="inspectionTable">
+
+                    <thead>
+
+                        <tr>
+                            <th>Inspection ID</th>
+                            <th>Institution</th>
+                            <th>Inspector</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="inspectionBody">
+
+
+                        <!-- Inspection 1 -->
+                        <tr
+                            data-status="completed"
+                            data-search="INS-1024 ABC College Rahul Sharma 12 Sep 2026 completed"
+                        >
+
+                            <td>
+                                <span class="inspection-id">
+                                    INS-1024
+                                </span>
+                            </td>
+
+                            <td>
+                                <div class="institution-cell">
+
+                                    <div class="institution-icon">
+                                        <i class="fa-solid fa-building"></i>
+                                    </div>
+
+                                    <div>
+                                        <strong>ABC College</strong>
+                                        <small>Rajasthan</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>
+                                <div class="inspector-cell">
+
+                                    <div class="avatar">
+                                        RS
+                                    </div>
+
+                                    <span>Rahul Sharma</span>
+
+                                </div>
+                            </td>
+
+                            <td>
+                                12 Sep 2026
+                            </td>
+
+                            <td>
+                                <span class="status completed">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    Completed
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="action-wrapper">
+
+                                    <button
+                                        class="action-btn"
+                                        type="button"
+                                        aria-label="Actions"
+                                    >
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </button>
+
+                                    <div class="action-menu">
+
+                                        <button
+                                            class="view-btn"
+                                            type="button"
+                                        >
+                                            <i class="fa-solid fa-eye"></i>
+                                            View
+                                        </button>
+
+                                        <button
+                                            class="edit-btn"
+                                            type="button"
+                                        >
+                                            <i class="fa-solid fa-pen"></i>
+                                            Edit
+                                        </button>
+
+                                        <button
+                                            class="delete-btn"
+                                            type="button"
+                                        >
+                                            <i class="fa-solid fa-trash"></i>
+                                            Delete
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- Inspection 2 -->
+                        <tr
+                            data-status="progress"
+                            data-search="INS-1023 XYZ Institute Amit Singh 05 Sep 2026 progress in progress"
+                        >
+
+                            <td>
+                                <span class="inspection-id">
+                                    INS-1023
+                                </span>
+                            </td>
+
+                            <td>
+                                <div class="institution-cell">
+
+                                    <div class="institution-icon">
+                                        <i class="fa-solid fa-building"></i>
+                                    </div>
+
+                                    <div>
+                                        <strong>XYZ Institute</strong>
+                                        <small>Rajasthan</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>
+                                <div class="inspector-cell">
+
+                                    <div class="avatar">
+                                        AS
+                                    </div>
+
+                                    <span>Amit Singh</span>
+
+                                </div>
+                            </td>
+
+                            <td>
+                                05 Sep 2026
+                            </td>
+
+                            <td>
+                                <span class="status progress">
+                                    <i class="fa-solid fa-spinner"></i>
+                                    In Progress
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="action-wrapper">
+
+                                    <button
+                                        class="action-btn"
+                                        type="button"
+                                    >
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </button>
+
+                                    <div class="action-menu">
+
+                                        <button
+                                            class="view-btn"
+                                            type="button"
+                                        >
+                                            <i class="fa-solid fa-eye"></i>
+                                            View
+                                        </button>
+
+                                        <button
+                                            class="edit-btn"
+                                            type="button"
+                                        >
+                                            <i class="fa-solid fa-pen"></i>
+                                            Edit
+                                        </button>
+
+                                        <button
+                                            class="delete-btn"
+                                            type="button"
+                                        >
+                                            <i class="fa-solid fa-trash"></i>
+                                            Delete
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- Inspection 3 -->
+                        <tr
+                            data-status="pending"
+                            data-search="INS-1021 PQR College Suresh Yadav 18 Aug 2026 pending"
+                        >
+
+                            <td>
+                                <span class="inspection-id">
+                                    INS-1021
+                                </span>
+                            </td>
+
+                            <td>
+                                <div class="institution-cell">
+
+                                    <div class="institution-icon">
+                                        <i class="fa-solid fa-building"></i>
+                                    </div>
+
+                                    <div>
+                                        <strong>PQR College</strong>
+                                        <small>Rajasthan</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>
+                                <div class="inspector-cell">
+
+                                    <div class="avatar">
+                                        SY
+                                    </div>
+
+                                    <span>Suresh Yadav</span>
+
+                                </div>
+                            </td>
+
+                            <td>
+                                18 Aug 2026
+                            </td>
+
+                            <td>
+                                <span class="status pending">
+                                    <i class="fa-solid fa-hourglass-half"></i>
+                                    Pending
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="action-wrapper">
+
+                                    <button
+                                        class="action-btn"
+                                        type="button"
+                                    >
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </button>
+
+                                    <div class="action-menu">
+
+                                        <button
+                                            class="view-btn"
+                                            type="button"
+                                        >
+                                            <i class="fa-solid fa-eye"></i>
+                                            View
+                                        </button>
+
+                                        <button
+                                            class="edit-btn"
+                                            type="button"
+                                        >
+                                            <i class="fa-solid fa-pen"></i>
+                                            Edit
+                                        </button>
+
+                                        <button
+                                            class="delete-btn"
+                                            type="button"
+                                        >
+                                            <i class="fa-solid fa-trash"></i>
+                                            Delete
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+
+                <!-- Empty State -->
+                <div
+                    class="empty-state"
+                    id="emptyState"
+                >
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <h3>No inspections found</h3>
+
+                    <p>
+                        Try changing your search or filter.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- ================= PAGINATION ================= -->
+            <div class="pagination">
+
+                <span id="paginationText">
+                    Showing 1–3 of 3 inspections
+                </span>
+
+                <div class="pagination-buttons">
+
+                    <button
+                        type="button"
+                        class="page-btn disabled"
+                    >
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="page-btn active"
+                    >
+                        1
+                    </button>
+
+                    <button
+                        type="button"
+                        class="page-btn disabled"
+                    >
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Final JS -->
+    <script src="../js/inspections.js"></script>
+
+</body>
+</html>

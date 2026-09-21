@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Inspector Login | SmartInspect AI</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Login CSS -->
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         BACKGROUND
+    ========================================== -->
+
+    <div class="background">
+
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+
+        <div class="grid"></div>
+
+    </div>
+
+
+    <!-- =========================================
+         BRAND
+    ========================================== -->
+
+    <header class="brand">
+
+        <a href="../admin/index.html" class="brand-link">
+
+            <div class="brand-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <div>
+                <h2>
+                    SmartInspect <span>AI</span>
+                </h2>
+
+                <p>
+                    Cyber Governance Platform
+                </p>
+            </div>
+
+        </a>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN LOGIN AREA
+    ========================================== -->
+
+    <main class="login-wrapper">
+
+
+        <!-- LEFT SIDE -->
+        <section class="login-intro">
+
+            <div class="intro-badge">
+                <span class="live-dot"></span>
+                INSPECTOR PORTAL
+            </div>
+
+            <h1>
+                Inspect.
+                <br>
+
+                <span>Verify.</span>
+
+                <br>
+
+                Improve.
+            </h1>
+
+            <p>
+                Empowering field inspectors with intelligent
+                tools for transparent, evidence-based
+                institutional inspections.
+            </p>
+
+
+            <!-- Features -->
+
+            <div class="intro-features">
+
+                <div class="intro-feature">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-location-crosshairs"></i>
+                    </div>
+
+                    <div>
+                        <strong>Field Ready</strong>
+                        <small>Inspect institutions anywhere</small>
+                    </div>
+
+                </div>
+
+
+                <div class="intro-feature">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+
+                    <div>
+                        <strong>Evidence Driven</strong>
+                        <small>Capture photos and inspection evidence</small>
+                    </div>
+
+                </div>
+
+
+                <div class="intro-feature">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+
+                    <div>
+                        <strong>AI Assisted</strong>
+                        <small>Smart insights for every inspection</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="quote">
+
+                <i class="fa-solid fa-quote-left"></i>
+
+                <p>
+                    Accountability today,
+                    a better tomorrow.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT LOGIN CARD -->
+        <section class="login-card">
+
+
+            <!-- Card Header -->
+
+            <div class="card-header">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                </div>
+
+                <div>
+
+                    <h2>
+                        Inspector Login
+                    </h2>
+
+                    <p>
+                        Sign in to your inspector account
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Login Form -->
+
+            <form id="loginForm">
+
+
+                <!-- Inspector ID -->
+
+                <div class="input-group">
+
+                    <label for="email">
+                        Inspector ID / Email
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-regular fa-user"></i>
+
+                        <input
+                            type="text"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your inspector ID or email"
+                            autocomplete="username"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Password -->
+
+                <div class="input-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="togglePassword"
+                            aria-label="Show password"
+                        >
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Options -->
+
+                <div class="login-options">
+
+                    <label class="remember">
+
+                        <input
+                            type="checkbox"
+                            id="remember"
+                        >
+
+                        <span class="checkmark"></span>
+
+                        Remember me
+
+                    </label>
+
+
+                    <a href="#" class="forgot-password">
+                        Forgot password?
+                    </a>
+
+                </div>
+
+
+                <!-- Login Button -->
+
+                <!-- <button
+                    type="submit"
+                    class="login-button"
+                >
+
+                    <span>
+                        Sign In
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button> -->
+
+
+                 <a href="pages/dashboard.html"
+                    type="submit"
+                    class="login-button"
+                >
+
+                    <span>
+                        Sign In
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+
+
+
+            </form>
+
+
+            <!-- Divider -->
+
+            <div class="divider">
+
+                <span></span>
+
+                <p>NEW INSPECTOR?</p>
+
+                <span></span>
+
+            </div>
+
+
+            <!-- Registration -->
+
+            <div class="register-box">
+
+                <p>
+                    Don't have an inspector account?
+                </p>
+
+                <a href="register.html"
+                   class="register-button">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                    Register as Inspector
+
+                </a>
+
+            </div>
+
+
+            <!-- Back -->
+
+            <a href="../index.html"
+               class="back-home">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back to SmartInspect AI
+
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 SmartInspect AI
+            <span>•</span>
+            Secure Inspector Portal
+        </p>
+
+    </footer>
+
+
+    <!-- JS -->
+
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

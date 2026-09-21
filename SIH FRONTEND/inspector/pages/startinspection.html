@@ -1,0 +1,3340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartInspect | Start Inspection</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/startinspection.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         BACKGROUND GLOW
+    ====================================================== -->
+
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="ambient ambient-three"></div>
+
+
+    <!-- =====================================================
+         SIDEBAR OVERLAY
+    ====================================================== -->
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                🛡
+            </div>
+
+            <div class="brand-text">
+                <h2>SmartInspect</h2>
+                <span>Inspector Portal</span>
+            </div>
+
+        </div>
+
+
+        <button
+            class="sidebar-close"
+            id="sidebarClose">
+
+            ✕
+
+        </button>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html" class="nav-item">
+
+                <span class="nav-icon">
+                    ▣
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a href="myassignment.html" class="nav-item">
+
+                <span class="nav-icon">
+                    ▤
+                </span>
+
+                <span>
+                    My Assignments
+                </span>
+
+            </a>
+
+
+            <a href="#" class="nav-item active">
+
+                <span class="nav-icon">
+                    ◷
+                </span>
+
+                <span>
+                    Start Inspection
+                </span>
+
+            </a>
+
+
+            <a href="history.html" class="nav-item">
+
+                <span class="nav-icon">
+                    ◴
+                </span>
+
+                <span>
+                    History
+                </span>
+
+            </a>
+
+
+            <a href="notifications.html" class="nav-item">
+
+                <span class="nav-icon">
+                    ♧
+                </span>
+
+                <span>
+                    Notifications
+                </span>
+
+                <span class="notification-badge">
+                    3
+                </span>
+
+            </a>
+
+
+            <a href="profile.html" class="nav-item">
+
+                <span class="nav-icon">
+                    ♙
+                </span>
+
+                <span>
+                    Profile & Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="security-box">
+
+                <div class="security-icon">
+                    ✓
+                </div>
+
+                <div>
+
+                    <strong>
+                        Verified Inspector
+                    </strong>
+
+                    <span>
+                        Secure field access
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="logout-btn"
+                id="logoutBtn">
+
+                ↪ &nbsp; Logout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <div class="main-wrapper">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <button
+                    class="menu-btn"
+                    id="menuBtn">
+
+                    ☰
+
+                </button>
+
+
+                <div class="page-heading">
+
+                    <span>
+                        INSPECTOR PORTAL
+                    </span>
+
+                    <h1 id="topTitle">
+                        Start Inspection
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <button class="top-notification">
+
+                    ♧
+
+                    <span>
+                        3
+                    </span>
+
+                </button>
+
+
+                <div class="profile-mini">
+
+                    <div class="profile-avatar">
+                        👨🏻
+                    </div>
+
+                    <div class="profile-info">
+
+                        <strong>
+                            Inspector Rahul
+                        </strong>
+
+                        <span>
+                            INS-1042
+                        </span>
+
+                    </div>
+
+                    <span class="profile-arrow">
+                        ⌄
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             PAGE CONTENT
+        ====================================================== -->
+
+        <main class="page-content">
+
+
+            <!-- =====================================================
+                 NEW NUMBERING: 1 → 7
+            ====================================================== -->
+
+            <div class="workflow-shell">
+
+
+                <div
+                    class="workflow-step active"
+                    data-step="1">
+
+                    <span>
+                        01
+                    </span>
+
+                    <small>
+                        Start
+                    </small>
+
+                </div>
+
+
+                <i></i>
+
+
+                <div
+                    class="workflow-step"
+                    data-step="2">
+
+                    <span>
+                        02
+                    </span>
+
+                    <small>
+                        Checklist
+                    </small>
+
+                </div>
+
+
+                <i></i>
+
+
+                <div
+                    class="workflow-step"
+                    data-step="3">
+
+                    <span>
+                        03
+                    </span>
+
+                    <small>
+                        Evidence
+                    </small>
+
+                </div>
+
+
+                <i></i>
+
+
+                <div
+                    class="workflow-step"
+                    data-step="4">
+
+                    <span>
+                        04
+                    </span>
+
+                    <small>
+                        Attendance
+                    </small>
+
+                </div>
+
+
+                <i></i>
+
+
+                <div
+                    class="workflow-step"
+                    data-step="5">
+
+                    <span>
+                        05
+                    </span>
+
+                    <small>
+                        AI Analysis
+                    </small>
+
+                </div>
+
+
+                <i></i>
+
+
+                <div
+                    class="workflow-step"
+                    data-step="6">
+
+                    <span>
+                        06
+                    </span>
+
+                    <small>
+                        Summary
+                    </small>
+
+                </div>
+
+
+                <i></i>
+
+
+                <div
+                    class="workflow-step"
+                    data-step="7">
+
+                    <span>
+                        07
+                    </span>
+
+                    <small>
+                        Declaration
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+                 1. START INSPECTION
+            ====================================================== -->
+
+            <section
+                class="workflow-screen active-screen"
+                id="screen1">
+
+
+                <button
+                    class="back-btn"
+                    onclick="goBack(1)">
+
+                    ← Back to Assignments
+
+                </button>
+
+
+                <div class="screen-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            STEP 01 · LOCATION READY
+                        </span>
+
+                        <h2>
+                            Start Inspection
+                        </h2>
+
+                        <p>
+                            Verify the assignment details before entering
+                            the inspection workflow.
+                        </p>
+
+                    </div>
+
+
+                    <span class="live-status">
+
+                        <b></b>
+
+                        Ready to Start
+
+                    </span>
+
+                </div>
+
+
+                <div class="start-grid">
+
+
+                    <!-- INSPECTOR -->
+
+                    <article class="glass-card inspector-verification">
+
+                        <div class="card-topline">
+
+                            <span class="mini-label">
+                                VERIFY INSPECTOR
+                            </span>
+
+                            <span class="verified-chip">
+                                ✓ Verified
+                            </span>
+
+                        </div>
+
+
+                        <div class="inspector-avatar">
+                            👨🏻
+                        </div>
+
+
+                        <h3>
+                            Inspector Rahul
+                        </h3>
+
+                        <p>
+                            INS-1042
+                        </p>
+
+                        <span class="department">
+                            Social Welfare Department
+                        </span>
+
+
+                        <div class="verification-line">
+
+                            <span>
+                                ●
+                            </span>
+
+                            Identity verified for this assignment
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ASSIGNMENT -->
+
+                    <article class="glass-card ready-card">
+
+                        <div class="card-topline">
+
+                            <span class="mini-label">
+                                ASSIGNMENT
+                            </span>
+
+                            <span class="priority-chip high">
+                                ● High Priority
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            ABC Rehabilitation Centre
+                        </h3>
+
+
+                        <p class="muted">
+                            Srinagar, J&K · INS-2026-00982
+                        </p>
+
+
+                        <div class="ready-list">
+
+                            <div>
+
+                                <span>
+                                    ⌁
+                                </span>
+
+                                <b>
+                                    Inspection Type
+                                </b>
+
+                                <em>
+                                    Surprise inspection
+                                </em>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    ◷
+                                </span>
+
+                                <b>
+                                    Due Date
+                                </b>
+
+                                <em>
+                                    20 Sep 2026
+                                </em>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    ◎
+                                </span>
+
+                                <b>
+                                    Beneficiaries
+                                </b>
+
+                                <em>
+                                    120 registered
+                                </em>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            class="primary-action full"
+                            onclick="goToStep(2)">
+
+                            Start Inspection
+
+                            <span>
+                                →
+                            </span>
+
+                        </button>
+
+                    </article>
+
+                </div>
+
+
+                <div class="info-strip">
+
+                    <span class="info-dot">
+                        i
+                    </span>
+
+                    <p>
+                        Complete each section in order.
+                        Your progress is saved on this page until submission.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 2. INSPECTION CHECKLIST
+            ====================================================== -->
+
+            <section
+                class="workflow-screen"
+                id="screen2">
+
+
+                <button
+                    class="back-btn"
+                    onclick="goBack(2)">
+
+                    ← Back to Start Inspection
+
+                </button>
+
+
+                <div class="screen-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            STEP 02 · FIELD CHECKLIST
+                        </span>
+
+                        <h2>
+                            Inspection Checklist
+                        </h2>
+
+                        <p>
+                            Open a category and record the condition
+                            observed during inspection.
+                        </p>
+
+                    </div>
+
+
+                    <div class="completion-box">
+
+                        <div>
+
+                            <strong id="completedCount">
+                                18
+                            </strong>
+
+                            <span>
+                                / 28 completed
+                            </span>
+
+                        </div>
+
+
+                        <div class="progress-track">
+
+                            <b id="miniProgressBar"></b>
+
+                        </div>
+
+
+                        <small id="progressPercent">
+                            64%
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="checklist-layout">
+
+
+                    <!-- CATEGORY MENU -->
+
+                    <aside class="checklist-menu">
+
+
+                        <button
+                            class="check-category active"
+                            data-check="infrastructure"
+                            onclick="openChecklist('infrastructure')">
+
+                            <span class="cat-icon red">
+                                ▣
+                            </span>
+
+                            <span>
+
+                                <b>
+                                    Infrastructure
+                                </b>
+
+                                <small>
+                                    4 / 5 completed
+                                </small>
+
+                            </span>
+
+                            <i>
+                                ›
+                            </i>
+
+                        </button>
+
+
+                        <button
+                            class="check-category"
+                            data-check="staff"
+                            onclick="openChecklist('staff')">
+
+                            <span class="cat-icon green">
+                                ♙
+                            </span>
+
+                            <span>
+
+                                <b>
+                                    Staff
+                                </b>
+
+                                <small>
+                                    3 / 5 completed
+                                </small>
+
+                            </span>
+
+                            <i>
+                                ›
+                            </i>
+
+                        </button>
+
+
+                        <button
+                            class="check-category"
+                            data-check="beneficiaries"
+                            onclick="openChecklist('beneficiaries')">
+
+                            <span class="cat-icon blue">
+                                ♙
+                            </span>
+
+                            <span>
+
+                                <b>
+                                    Beneficiaries
+                                </b>
+
+                                <small>
+                                    3 / 5 completed
+                                </small>
+
+                            </span>
+
+                            <i>
+                                ›
+                            </i>
+
+                        </button>
+
+
+                        <button
+                            class="check-category"
+                            data-check="scheme"
+                            onclick="openChecklist('scheme')">
+
+                            <span class="cat-icon purple">
+                                ▤
+                            </span>
+
+                            <span>
+
+                                <b>
+                                    Scheme Compliance
+                                </b>
+
+                                <small>
+                                    4 / 5 completed
+                                </small>
+
+                            </span>
+
+                            <i>
+                                ›
+                            </i>
+
+                        </button>
+
+
+                        <button
+                            class="check-category"
+                            data-check="observations"
+                            onclick="openChecklist('observations')">
+
+                            <span class="cat-icon teal">
+                                ☷
+                            </span>
+
+                            <span>
+
+                                <b>
+                                    General Observations
+                                </b>
+
+                                <small>
+                                    2 / 5 completed
+                                </small>
+
+                            </span>
+
+                            <i>
+                                ›
+                            </i>
+
+                        </button>
+
+                    </aside>
+
+
+                    <!-- CHECKLIST DETAILS -->
+
+                    <div class="checklist-detail">
+
+
+                        <!-- =============================================
+                             INFRASTRUCTURE
+                        ============================================== -->
+
+                        <div
+                            class="checklist-subdiv active-checklist"
+                            id="check-infrastructure">
+
+
+                            <div class="sub-header">
+
+                                <div class="sub-title">
+
+                                    <span class="cat-icon red">
+                                        ▣
+                                    </span>
+
+                                    <div>
+
+                                        <span class="mini-label">
+                                            CATEGORY 01
+                                        </span>
+
+                                        <h3>
+                                            Infrastructure
+                                        </h3>
+
+                                        <p>
+                                            Verify building condition and
+                                            physical facilities.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <span class="section-score">
+                                    4 / 5
+                                </span>
+
+                            </div>
+
+
+                            <div class="questions">
+
+
+                                <div class="question">
+
+                                    <div>
+
+                                        <b>
+                                            Building condition
+                                        </b>
+
+                                        <p>
+                                            Is the building structurally maintained?
+                                        </p>
+
+                                    </div>
+
+
+                                    <div class="choice-group">
+
+                                        <button class="choice selected-green">
+                                            ✓ Compliant
+                                        </button>
+
+                                        <button class="choice">
+                                            Partially
+                                        </button>
+
+                                        <button class="choice noncompliant">
+                                            ✕ Non-Compliant
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="question">
+
+                                    <div>
+
+                                        <b>
+                                            Cleanliness
+                                        </b>
+
+                                        <p>
+                                            Are premises clean and hygienic?
+                                        </p>
+
+                                    </div>
+
+
+                                    <div class="choice-group">
+
+                                        <button class="choice selected-green">
+                                            ✓ Compliant
+                                        </button>
+
+                                        <button class="choice">
+                                            Partially
+                                        </button>
+
+                                        <button class="choice noncompliant">
+                                            ✕ Non-Compliant
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="question">
+
+                                    <div>
+
+                                        <b>
+                                            Safety equipment
+                                        </b>
+
+                                        <p>
+                                            Are required safety arrangements available?
+                                        </p>
+
+                                    </div>
+
+
+                                    <div class="choice-group">
+
+                                        <button class="choice selected-green">
+                                            ✓ Compliant
+                                        </button>
+
+                                        <button class="choice">
+                                            Partially
+                                        </button>
+
+                                        <button class="choice noncompliant">
+                                            ✕ Non-Compliant
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="question">
+
+                                    <div>
+
+                                        <b>
+                                            Accessibility
+                                        </b>
+
+                                        <p>
+                                            Is the institution accessible to beneficiaries?
+                                        </p>
+
+                                    </div>
+
+
+                                    <div class="choice-group">
+
+                                        <button class="choice selected-green">
+                                            ✓ Compliant
+                                        </button>
+
+                                        <button class="choice">
+                                            Partially
+                                        </button>
+
+                                        <button class="choice noncompliant">
+                                            ✕ Non-Compliant
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="question">
+
+                                    <div>
+
+                                        <b>
+                                            Emergency facilities
+                                        </b>
+
+                                        <p>
+                                            Are emergency facilities available?
+                                        </p>
+
+                                    </div>
+
+
+                                    <div class="choice-group">
+
+                                        <button class="choice">
+                                            ✓ Compliant
+                                        </button>
+
+                                        <button class="choice selected-yellow">
+                                            Partially
+                                        </button>
+
+                                        <button class="choice noncompliant">
+                                            ✕ Non-Compliant
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =============================================
+                             STAFF
+                        ============================================== -->
+
+                        <div
+                            class="checklist-subdiv"
+                            id="check-staff">
+
+
+                            <div class="sub-header">
+
+                                <div class="sub-title">
+
+                                    <span class="cat-icon green">
+                                        ♙
+                                    </span>
+
+                                    <div>
+
+                                        <span class="mini-label">
+                                            CATEGORY 02
+                                        </span>
+
+                                        <h3>
+                                            Staff
+                                        </h3>
+
+                                        <p>
+                                            Verify staff availability,
+                                            records and qualifications.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <span class="section-score">
+                                    3 / 5
+                                </span>
+
+                            </div>
+
+
+                            <div class="questions">
+
+                                <div class="question">
+
+                                    <div>
+
+                                        <b>
+                                            Staff attendance
+                                        </b>
+
+                                        <p>
+                                            Are required staff members present?
+                                        </p>
+
+                                    </div>
+
+                                    <div class="choice-group">
+
+                                        <button class="choice selected-green">
+                                            ✓ Compliant
+                                        </button>
+
+                                        <button class="choice">
+                                            Partially
+                                        </button>
+
+                                        <button class="choice noncompliant">
+                                            ✕ Non-Compliant
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="question">
+
+                                    <div>
+
+                                        <b>
+                                            Staff qualification
+                                        </b>
+
+                                        <p>
+                                            Do staff meet qualification requirements?
+                                        </p>
+
+                                    </div>
+
+                                    <div class="choice-group">
+
+                                        <button class="choice selected-green">
+                                            ✓ Compliant
+                                        </button>
+
+                                        <button class="choice">
+                                            Partially
+                                        </button>
+
+                                        <button class="choice noncompliant">
+                                            ✕ Non-Compliant
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="question">
+
+                                    <div>
+
+                                        <b>
+                                            Staff records
+                                        </b>
+
+                                        <p>
+                                            Are staff records maintained?
+                                        </p>
+
+                                    </div>
+
+                                    <div class="choice-group">
+
+                                        <button class="choice selected-green">
+                                            ✓ Compliant
+                                        </button>
+
+                                        <button class="choice">
+                                            Partially
+                                        </button>
+
+                                        <button class="choice noncompliant">
+                                            ✕ Non-Compliant
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="question">
+
+                                    <div>
+
+                                        <b>
+                                            Training records
+                                        </b>
+
+                                        <p>
+                                            Are training records available?
+                                        </p>
+
+                                    </div>
+
+                                    <div class="choice-group">
+
+                                        <button class="choice">
+                                            ✓ Compliant
+                                        </button>
+
+                                        <button class="choice selected-yellow">
+                                            Partially
+                                        </button>
+
+                                        <button class="choice noncompliant">
+                                            ✕ Non-Compliant
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="question">
+
+                                    <div>
+
+                                        <b>
+                                            Staff interaction
+                                        </b>
+
+                                        <p>
+                                            Is staff interaction satisfactory?
+                                        </p>
+
+                                    </div>
+
+                                    <div class="choice-group">
+
+                                        <button class="choice">
+                                            ✓ Compliant
+                                        </button>
+
+                                        <button class="choice selected-yellow">
+                                            Partially
+                                        </button>
+
+                                        <button class="choice noncompliant">
+                                            ✕ Non-Compliant
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =============================================
+                             BENEFICIARIES
+                        ============================================== -->
+
+                        <div
+                            class="checklist-subdiv"
+                            id="check-beneficiaries">
+
+
+                            <div class="sub-header">
+
+                                <div class="sub-title">
+
+                                    <span class="cat-icon blue">
+                                        ♙
+                                    </span>
+
+                                    <div>
+
+                                        <span class="mini-label">
+                                            CATEGORY 03
+                                        </span>
+
+                                        <h3>
+                                            Beneficiaries
+                                        </h3>
+
+                                        <p>
+                                            Verify beneficiary presence,
+                                            facilities and feedback.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <span class="section-score">
+                                    3 / 5
+                                </span>
+
+                            </div>
+
+
+                            <div class="questions">
+
+
+                                <div class="question">
+
+                                    <div>
+
+                                        <b>
+                                            Number of beneficiaries present
+                                        </b>
+
+                                        <p>
+                                            Verify the beneficiary count.
+                                        </p>
+
+                                    </div>
+
+                                    <div class="choice-group">
+
+                                        <button class="choice selected-green">
+                                            ✓ Compliant
+                                        </button>
+
+                                        <button class="choice">
+                                            Partially
+                                        </button>
+
+                                        <button class="choice noncompliant">
+                                            ✕ Non-Compliant
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="question">
+
+                                    <div>
+
+                                        <b>
+                                            Interaction with beneficiaries
+                                        </b>
+
+                                        <p>
+                                            Discuss services with beneficiaries.
+                                        </p>
+
+                                    </div>
+
+                                    <div class="choice-group">
+
+                                        <button class="choice selected-green">
+                                            ✓ Compliant
+                                        </button>
+
+                                        <button class="choice">
+                                            Partially
+                                        </button>
+
+                                        <button class="choice noncompliant">
+                                            ✕ Non-Compliant
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="question">
+
+                                    <div>
+
+                                        <b>
+                                            Facilities provided
+                                        </b>
+
+                                        <p>
+                                            Check whether required facilities
+                                            are provided.
+                                        </p>
+
+                                    </div>
+
+                                    <div class="choice-group">
+
+                                        <button class="choice selected-green">
+                                            ✓ Compliant
+                                        </button>
+
+                                        <button class="choice">
+                                            Partially
+                                        </button>
+
+                                        <button class="choice noncompliant">
+                                            ✕ Non-Compliant
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="question">
+
+                                    <div>
+
+                                        <b>
+                                            Beneficiary feedback
+                                        </b>
+
+                                        <p>
+                                            Record beneficiary feedback.
+                                        </p>
+
+                                    </div>
+
+                                    <div class="choice-group">
+
+                                        <button class="choice">
+                                            ✓ Compliant
+                                        </button>
+
+                                        <button class="choice selected-yellow">
+                                            Partially
+                                        </button>
+
+                                        <button class="choice noncompliant">
+                                            ✕ Non-Compliant
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="question">
+
+                                    <div>
+
+                                        <b>
+                                            Service satisfaction
+                                        </b>
+
+                                        <p>
+                                            Assess satisfaction with services received.
+                                        </p>
+
+                                    </div>
+
+                                    <div class="choice-group">
+
+                                        <button class="choice">
+                                            ✓ Compliant
+                                        </button>
+
+                                        <button class="choice selected-yellow">
+                                            Partially
+                                        </button>
+
+                                        <button class="choice noncompliant">
+                                            ✕ Non-Compliant
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =============================================
+                             SCHEME COMPLIANCE
+                        ============================================== -->
+
+                        <div
+                            class="checklist-subdiv"
+                            id="check-scheme">
+
+
+                            <div class="sub-header">
+
+                                <div class="sub-title">
+
+                                    <span class="cat-icon purple">
+                                        ▤
+                                    </span>
+
+                                    <div>
+
+                                        <span class="mini-label">
+                                            CATEGORY 04
+                                        </span>
+
+                                        <h3>
+                                            Scheme Compliance
+                                        </h3>
+
+                                        <p>
+                                            Verify compliance with applicable
+                                            scheme requirements.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <span class="section-score">
+                                    4 / 5
+                                </span>
+
+                            </div>
+
+
+                            <div class="questions">
+
+
+                                <div class="question">
+
+                                    <div>
+
+                                        <b>
+                                            Scheme registration
+                                        </b>
+
+                                        <p>
+                                            Verify valid scheme registration.
+                                        </p>
+
+                                    </div>
+
+                                    <div class="choice-group">
+
+                                        <button class="choice selected-green">
+                                            ✓ Compliant
+                                        </button>
+
+                                        <button class="choice">
+                                            Partially
+                                        </button>
+
+                                        <button class="choice noncompliant">
+                                            ✕ Non-Compliant
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="question">
+
+                                    <div>
+
+                                        <b>
+                                            Scheme documentation
+                                        </b>
+
+                                        <p>
+                                            Check required documentation.
+                                        </p>
+
+                                    </div>
+
+                                    <div class="choice-group">
+
+                                        <button class="choice selected-green">
+                                            ✓ Compliant
+                                        </button>
+
+                                        <button class="choice">
+                                            Partially
+                                        </button>
+
+                                        <button class="choice noncompliant">
+                                            ✕ Non-Compliant
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="question">
+
+                                    <div>
+
+                                        <b>
+                                            Fund utilization
+                                        </b>
+
+                                        <p>
+                                            Verify proper utilization of funds.
+                                        </p>
+
+                                    </div>
+
+                                    <div class="choice-group">
+
+                                        <button class="choice selected-green">
+                                            ✓ Compliant
+                                        </button>
+
+                                        <button class="choice">
+                                            Partially
+                                        </button>
+
+                                        <button class="choice noncompliant">
+                                            ✕ Non-Compliant
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="question">
+
+                                    <div>
+
+                                        <b>
+                                            Reporting compliance
+                                        </b>
+
+                                        <p>
+                                            Verify regular reporting.
+                                        </p>
+
+                                    </div>
+
+                                    <div class="choice-group">
+
+                                        <button class="choice selected-green">
+                                            ✓ Compliant
+                                        </button>
+
+                                        <button class="choice">
+                                            Partially
+                                        </button>
+
+                                        <button class="choice noncompliant">
+                                            ✕ Non-Compliant
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="question">
+
+                                    <div>
+
+                                        <b>
+                                            Record maintenance
+                                        </b>
+
+                                        <p>
+                                            Are scheme records updated?
+                                        </p>
+
+                                    </div>
+
+                                    <div class="choice-group">
+
+                                        <button class="choice">
+                                            ✓ Compliant
+                                        </button>
+
+                                        <button class="choice selected-yellow">
+                                            Partially
+                                        </button>
+
+                                        <button class="choice noncompliant">
+                                            ✕ Non-Compliant
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =============================================
+                             GENERAL OBSERVATIONS
+                        ============================================== -->
+
+                        <div
+                            class="checklist-subdiv"
+                            id="check-observations">
+
+
+                            <div class="sub-header">
+
+                                <div class="sub-title">
+
+                                    <span class="cat-icon teal">
+                                        ☷
+                                    </span>
+
+                                    <div>
+
+                                        <span class="mini-label">
+                                            CATEGORY 05
+                                        </span>
+
+                                        <h3>
+                                            General Observations
+                                        </h3>
+
+                                        <p>
+                                            Record overall findings and
+                                            immediate concerns.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <span class="section-score">
+                                    2 / 5
+                                </span>
+
+                            </div>
+
+
+                            <div class="questions">
+
+
+                                <div class="question">
+
+                                    <div>
+
+                                        <b>
+                                            Overall environment
+                                        </b>
+
+                                        <p>
+                                            Is the overall environment satisfactory?
+                                        </p>
+
+                                    </div>
+
+                                    <div class="choice-group">
+
+                                        <button class="choice selected-green">
+                                            ✓ Compliant
+                                        </button>
+
+                                        <button class="choice">
+                                            Partially
+                                        </button>
+
+                                        <button class="choice noncompliant">
+                                            ✕ Non-Compliant
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="question">
+
+                                    <div>
+
+                                        <b>
+                                            Record observations
+                                        </b>
+
+                                        <p>
+                                            Are there any major observations?
+                                        </p>
+
+                                    </div>
+
+                                    <div class="choice-group">
+
+                                        <button class="choice selected-green">
+                                            ✓ Compliant
+                                        </button>
+
+                                        <button class="choice">
+                                            Partially
+                                        </button>
+
+                                        <button class="choice noncompliant">
+                                            ✕ Non-Compliant
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="question">
+
+                                    <div>
+
+                                        <b>
+                                            Beneficiary satisfaction
+                                        </b>
+
+                                        <p>
+                                            Is beneficiary satisfaction satisfactory?
+                                        </p>
+
+                                    </div>
+
+                                    <div class="choice-group">
+
+                                        <button class="choice">
+                                            ✓ Compliant
+                                        </button>
+
+                                        <button class="choice selected-yellow">
+                                            Partially
+                                        </button>
+
+                                        <button class="choice noncompliant">
+                                            ✕ Non-Compliant
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="question">
+
+                                    <div>
+
+                                        <b>
+                                            Immediate concerns
+                                        </b>
+
+                                        <p>
+                                            Are there immediate concerns
+                                            requiring attention?
+                                        </p>
+
+                                    </div>
+
+                                    <div class="choice-group">
+
+                                        <button class="choice">
+                                            ✓ Compliant
+                                        </button>
+
+                                        <button class="choice selected-yellow">
+                                            Partially
+                                        </button>
+
+                                        <button class="choice noncompliant">
+                                            ✕ Non-Compliant
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="question">
+
+                                    <div>
+
+                                        <b>
+                                            Follow-up requirement
+                                        </b>
+
+                                        <p>
+                                            Does the institution require
+                                            a follow-up visit?
+                                        </p>
+
+                                    </div>
+
+                                    <div class="choice-group">
+
+                                        <button class="choice">
+                                            ✓ Compliant
+                                        </button>
+
+                                        <button class="choice selected-yellow">
+                                            Partially
+                                        </button>
+
+                                        <button class="choice noncompliant">
+                                            ✕ Non-Compliant
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="step-footer">
+
+                            <button
+                                class="secondary-action"
+                                onclick="goToStep(1)">
+
+                                ← Previous
+
+                            </button>
+
+
+                            <button
+                                class="primary-action"
+                                onclick="goToStep(3)">
+
+                                Next Section
+                                <span>→</span>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 3. CAPTURE EVIDENCE
+            ====================================================== -->
+
+            <section
+                class="workflow-screen"
+                id="screen3">
+
+
+                <button
+                    class="back-btn"
+                    onclick="goBack(3)">
+
+                    ← Back to Checklist
+
+                </button>
+
+
+                <div class="screen-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            STEP 03 · EVIDENCE
+                        </span>
+
+                        <h2>
+                            Capture Evidence
+                        </h2>
+
+                        <p>
+                            Collect location-verified photos,
+                            videos and documents.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="evidence-tabs">
+
+                    <button class="evidence-tab active">
+                        ▣ Photos
+                    </button>
+
+                    <button class="evidence-tab">
+                        ▷ Video
+                    </button>
+
+                    <button class="evidence-tab">
+                        ▤ Documents
+                    </button>
+
+                </div>
+
+
+                <div class="evidence-layout">
+
+
+                    <!-- CAPTURE -->
+
+                    <article class="glass-card capture-card">
+
+                        <div class="evidence-preview">
+
+                            <div class="building-art">
+                                🏢
+                            </div>
+
+                            <div class="gps-pill">
+                                ● GPS Verified
+                            </div>
+
+                            <div class="camera-corner">
+                                ◎
+                            </div>
+
+                        </div>
+
+
+                        <div class="capture-copy">
+
+                            <div>
+
+                                <span class="mini-label">
+                                    LIVE EVIDENCE
+                                </span>
+
+                                <h3>
+                                    Capture verified evidence
+                                </h3>
+
+                            </div>
+
+
+                            <span class="counter-pill">
+                                8 captured
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            class="primary-action full"
+                            onclick="captureEvidence()">
+
+                            ◎ Capture Evidence
+
+                        </button>
+
+
+                        <button
+                            class="secondary-action full"
+                            onclick="uploadEvidence()">
+
+                            ⇧ Upload from Gallery
+
+                        </button>
+
+                    </article>
+
+
+                    <!-- RECENT -->
+
+                    <article class="glass-card recent-card">
+
+                        <div class="card-title-row">
+
+                            <div>
+
+                                <span class="mini-label">
+                                    RECENT
+                                </span>
+
+                                <h3>
+                                    Recent Evidence
+                                </h3>
+
+                            </div>
+
+                            <button class="text-btn">
+                                View All
+                            </button>
+
+                        </div>
+
+
+                        <div class="evidence-grid">
+
+
+                            <div class="evidence-thumb">
+
+                                <span>
+                                    🏠
+                                </span>
+
+                                <small>
+                                    10:54 AM
+                                </small>
+
+                                <b>
+                                    ✓ GPS Verified
+                                </b>
+
+                            </div>
+
+
+                            <div class="evidence-thumb">
+
+                                <span>
+                                    🏡
+                                </span>
+
+                                <small>
+                                    11:12 AM
+                                </small>
+
+                                <b>
+                                    ✓ GPS Verified
+                                </b>
+
+                            </div>
+
+
+                            <div class="evidence-thumb">
+
+                                <span>
+                                    🏢
+                                </span>
+
+                                <small>
+                                    11:35 AM
+                                </small>
+
+                                <b>
+                                    ✓ GPS Verified
+                                </b>
+
+                            </div>
+
+
+                            <div class="evidence-thumb">
+
+                                <span>
+                                    🏫
+                                </span>
+
+                                <small>
+                                    11:48 AM
+                                </small>
+
+                                <b>
+                                    ✓ GPS Verified
+                                </b>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="step-footer">
+
+                    <button
+                        class="secondary-action"
+                        onclick="goToStep(2)">
+
+                        ← Previous
+
+                    </button>
+
+
+                    <button
+                        class="primary-action"
+                        onclick="goToStep(4)">
+
+                        Next Section
+                        <span>→</span>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 4. ATTENDANCE
+            ====================================================== -->
+
+            <section
+                class="workflow-screen"
+                id="screen4">
+
+
+                <button
+                    class="back-btn"
+                    onclick="goBack(4)">
+
+                    ← Back to Evidence
+
+                </button>
+
+
+                <div class="screen-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            STEP 04 · VERIFICATION
+                        </span>
+
+                        <h2>
+                            Attendance Verification
+                        </h2>
+
+                        <p>
+                            Verify staff and beneficiary attendance records.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="attendance-grid">
+
+
+                    <article class="glass-card attendance-card">
+
+                        <div class="metric-icon blue-bg">
+                            ♙
+                        </div>
+
+                        <div class="metric-copy">
+
+                            <span>
+                                STAFF ATTENDANCE
+                            </span>
+
+                            <b>
+                                18 / 20
+                            </b>
+
+                            <small>
+                                Present
+                            </small>
+
+                        </div>
+
+                        <div class="ring green-ring">
+                            <b>
+                                90%
+                            </b>
+                        </div>
+
+                    </article>
+
+
+                    <article class="glass-card attendance-card">
+
+                        <div class="metric-icon purple-bg">
+                            ♙
+                        </div>
+
+                        <div class="metric-copy">
+
+                            <span>
+                                BENEFICIARY ATTENDANCE
+                            </span>
+
+                            <b>
+                                87 / 120
+                            </b>
+
+                            <small>
+                                Present
+                            </small>
+
+                        </div>
+
+                        <div class="ring yellow-ring">
+
+                            <b>
+                                72.5%
+                            </b>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="warning-card">
+
+                    <span>
+                        ⚠
+                    </span>
+
+                    <div>
+
+                        <b>
+                            Attendance lower than expected
+                        </b>
+
+                        <p>
+                            The beneficiary attendance is below
+                            the expected range.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <article class="glass-card table-card">
+
+                    <div class="card-title-row">
+
+                        <div>
+
+                            <span class="mini-label">
+                                RANDOM SAMPLE
+                            </span>
+
+                            <h3>
+                                Beneficiary Verification
+                            </h3>
+
+                        </div>
+
+                        <span class="counter-pill">
+                            5 Selected
+                        </span>
+
+                    </div>
+
+
+                    <div class="table-wrap">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        #
+                                    </th>
+
+                                    <th>
+                                        Beneficiary ID
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                    <th>
+                                        Remarks
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        01
+                                    </td>
+
+                                    <td>
+                                        BNF-001
+                                    </td>
+
+                                    <td class="good-text">
+                                        ✓ Verified
+                                    </td>
+
+                                    <td>
+                                        —
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        02
+                                    </td>
+
+                                    <td>
+                                        BNF-016
+                                    </td>
+
+                                    <td class="good-text">
+                                        ✓ Verified
+                                    </td>
+
+                                    <td>
+                                        —
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        03
+                                    </td>
+
+                                    <td>
+                                        BNF-021
+                                    </td>
+
+                                    <td class="good-text">
+                                        ✓ Verified
+                                    </td>
+
+                                    <td>
+                                        —
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        04
+                                    </td>
+
+                                    <td>
+                                        BNF-037
+                                    </td>
+
+                                    <td class="warn-text">
+                                        ⚠ Issue
+                                    </td>
+
+                                    <td>
+                                        Not present
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        05
+                                    </td>
+
+                                    <td>
+                                        BNF-064
+                                    </td>
+
+                                    <td class="good-text">
+                                        ✓ Verified
+                                    </td>
+
+                                    <td>
+                                        —
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </article>
+
+
+                <div class="step-footer">
+
+                    <button
+                        class="secondary-action"
+                        onclick="goToStep(3)">
+
+                        ← Previous
+
+                    </button>
+
+
+                    <button
+                        class="primary-action"
+                        onclick="goToStep(5)">
+
+                        Next Section
+                        <span>→</span>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 5. AI ANALYSIS
+            ====================================================== -->
+
+            <section
+                class="workflow-screen"
+                id="screen5">
+
+
+                <button
+                    class="back-btn"
+                    onclick="goBack(5)">
+
+                    ← Back to Attendance
+
+                </button>
+
+
+                <div class="screen-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            STEP 05 · SMART ANALYSIS
+                        </span>
+
+                        <h2>
+                            AI Inspection Analysis
+                        </h2>
+
+                        <p>
+                            Review automated observations generated
+                            from the inspection data.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="ai-button"
+                        onclick="runAIAnalysis()">
+
+                        ✦ Powered by AI
+
+                    </button>
+
+                </div>
+
+
+                <div class="ai-grid">
+
+
+                    <article class="glass-card anomaly-panel">
+
+                        <div class="card-title-row">
+
+                            <div>
+
+                                <span class="mini-label">
+                                    DETECTION ENGINE
+                                </span>
+
+                                <h3>
+                                    AI Analysis
+                                </h3>
+
+                            </div>
+
+                            <span class="alert-chip">
+                                3 anomalies
+                            </span>
+
+                        </div>
+
+
+                        <div class="anomaly-list">
+
+
+                            <div>
+
+                                <i>
+                                    1
+                                </i>
+
+                                <p>
+                                    Attendance significantly below
+                                    historical average
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <i>
+                                    2
+                                </i>
+
+                                <p>
+                                    Evidence GPS mismatch detected
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <i>
+                                    3
+                                </i>
+
+                                <p>
+                                    Similar evidence found in
+                                    previous inspection
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="glass-card risk-panel">
+
+                        <span class="mini-label">
+                            RISK IMPACT
+                        </span>
+
+                        <strong>
+                            +27
+                        </strong>
+
+                        <span>
+                            Current Risk Score
+                        </span>
+
+                        <b>
+                            68
+                            <small>
+                                / 100
+                            </small>
+                        </b>
+
+                    </article>
+
+                </div>
+
+
+                <article class="glass-card insights-card">
+
+                    <div class="card-title-row">
+
+                        <div>
+
+                            <span class="mini-label">
+                                MODEL INSIGHTS
+                            </span>
+
+                            <h3>
+                                Detailed Insights
+                            </h3>
+
+                        </div>
+
+                        <span class="ai-glow">
+                            ✦ Live
+                        </span>
+
+                    </div>
+
+
+                    <div class="insight-row">
+
+                        <span>
+                            Attendance Pattern
+                        </span>
+
+                        <b>
+                            15% lower than average
+                        </b>
+
+                    </div>
+
+
+                    <div class="insight-row">
+
+                        <span>
+                            Evidence Analysis
+                        </span>
+
+                        <b>
+                            1 photo location mismatch
+                        </b>
+
+                    </div>
+
+
+                    <div class="insight-row">
+
+                        <span>
+                            Document Verification
+                        </span>
+
+                        <b class="good-text">
+                            All documents valid
+                        </b>
+
+                    </div>
+
+
+                    <div class="insight-row">
+
+                        <span>
+                            Beneficiary Feedback
+                        </span>
+
+                        <b>
+                            2 negative responses
+                        </b>
+
+                    </div>
+
+
+                    <div class="insight-row">
+
+                        <span>
+                            Overall Assessment
+                        </span>
+
+                        <b class="warn-text">
+                            Needs Attention
+                        </b>
+
+                    </div>
+
+                </article>
+
+
+                <div class="ai-suggestion">
+
+                    <span>
+                        ✦
+                    </span>
+
+                    <div>
+
+                        <b>
+                            AI Suggestion
+                        </b>
+
+                        <p>
+                            The inspection may require a follow-up visit.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="step-footer">
+
+                    <button
+                        class="secondary-action"
+                        onclick="goToStep(4)">
+
+                        ← Previous
+
+                    </button>
+
+
+                    <button
+                        class="primary-action"
+                        onclick="goToStep(6)">
+
+                        Continue
+                        <span>→</span>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 6. INSPECTION SUMMARY
+            ====================================================== -->
+
+            <section
+                class="workflow-screen"
+                id="screen6">
+
+
+                <button
+                    class="back-btn"
+                    onclick="goBack(6)">
+
+                    ← Back to AI Analysis
+
+                </button>
+
+
+                <div class="screen-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            STEP 06 · FINAL REVIEW
+                        </span>
+
+                        <h2>
+                            Inspection Summary
+                        </h2>
+
+                        <p>
+                            Review your inspection data before signing
+                            the declaration.
+                        </p>
+
+                    </div>
+
+
+                    <span class="live-status">
+
+                        <b></b>
+
+                        Ready to Submit
+
+                    </span>
+
+                </div>
+
+
+                <div class="summary-grid">
+
+
+                    <article class="glass-card summary-main">
+
+                        <div class="institution-summary">
+
+                            <div class="institution-symbol">
+                                A
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    ABC Rehabilitation Centre
+                                </h3>
+
+                                <p>
+                                    Srinagar, J&K
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="summary-list">
+
+
+                            <div>
+
+                                <span>
+                                    ✓
+                                </span>
+
+                                <p>
+                                    Checklist completed
+                                </p>
+
+                                <b>
+                                    23 / 28
+                                </b>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    ✓
+                                </span>
+
+                                <p>
+                                    Photos captured
+                                </p>
+
+                                <b>
+                                    8
+                                </b>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    ✓
+                                </span>
+
+                                <p>
+                                    Videos captured
+                                </p>
+
+                                <b>
+                                    2
+                                </b>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    ✓
+                                </span>
+
+                                <p>
+                                    Documents uploaded
+                                </p>
+
+                                <b>
+                                    3
+                                </b>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    ✓
+                                </span>
+
+                                <p>
+                                    GPS verified
+                                </p>
+
+                                <b>
+                                    ✓
+                                </b>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    ✓
+                                </span>
+
+                                <p>
+                                    Attendance recorded
+                                </p>
+
+                                <b>
+                                    ✓
+                                </b>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    ✓
+                                </span>
+
+                                <p>
+                                    Remarks added
+                                </p>
+
+                                <b>
+                                    ✓
+                                </b>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="glass-card score-card">
+
+                        <span class="mini-label">
+                            INSPECTION RISK
+                        </span>
+
+                        <div class="score">
+                            68
+                        </div>
+
+                        <span class="out-of">
+                            / 100
+                        </span>
+
+                        <div class="score-bar">
+                            <b></b>
+                        </div>
+
+                        <strong>
+                            Moderate Risk
+                        </strong>
+
+                        <p>
+                            Based on checklist, evidence and attendance.
+                        </p>
+
+                    </article>
+
+                </div>
+
+
+                <div class="step-footer">
+
+                    <button
+                        class="secondary-action"
+                        onclick="goToStep(5)">
+
+                        ← Previous
+
+                    </button>
+
+
+                    <button
+                        class="primary-action"
+                        onclick="goToStep(7)">
+
+                        Proceed to Declaration
+                        <span>→</span>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 7. DIGITAL DECLARATION
+            ====================================================== -->
+
+            <section
+                class="workflow-screen"
+                id="screen7">
+
+
+                <button
+                    class="back-btn"
+                    onclick="goBack(7)">
+
+                    ← Back to Summary
+
+                </button>
+
+
+                <div class="screen-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            STEP 07 · AUTHORIZATION
+                        </span>
+
+                        <h2>
+                            Digital Declaration
+                        </h2>
+
+                        <p>
+                            Confirm the information and evidence
+                            before submitting.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <article class="glass-card declaration-card">
+
+
+                    <div class="declaration-head">
+
+                        <div class="declaration-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <span class="mini-label">
+                                INSPECTOR DECLARATION
+                            </span>
+
+                            <h3>
+                                Final Confirmation
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <label class="declaration-row">
+
+                        <input
+                            type="checkbox"
+                            id="declaration1"
+                            onchange="checkDeclaration()">
+
+                        <span class="custom-check">
+                            ✓
+                        </span>
+
+                        <span>
+                            I confirm that the information provided
+                            is accurate to the best of my knowledge.
+                        </span>
+
+                    </label>
+
+
+                    <label class="declaration-row">
+
+                        <input
+                            type="checkbox"
+                            id="declaration2"
+                            onchange="checkDeclaration()">
+
+                        <span class="custom-check">
+                            ✓
+                        </span>
+
+                        <span>
+                            I confirm that the evidence was collected
+                            during this inspection.
+                        </span>
+
+                    </label>
+
+
+                    <div class="declaration-note">
+
+                        <span>
+                            🔒
+                        </span>
+
+                        <p>
+                            Your declaration will be attached
+                            to the inspection record.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="primary-action full submit-btn"
+                        id="submitInspection"
+                        disabled
+                        onclick="submitInspection()">
+
+                        ➤ Submit Inspection
+
+                    </button>
+
+                </article>
+
+
+                <div class="step-footer single-left">
+
+                    <button
+                        class="secondary-action"
+                        onclick="goToStep(6)">
+
+                        ← Previous
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 SUBMISSION SUCCESS
+            ====================================================== -->
+
+            <section
+                class="workflow-screen success-screen"
+                id="screenSuccess">
+
+
+                <button
+                    class="back-btn"
+                    onclick="goBack('success')">
+
+                    ← Back
+
+                </button>
+
+
+                <article class="success-card glass-card">
+
+
+                    <div class="success-orb">
+
+                        <span>
+                            ✓
+                        </span>
+
+                    </div>
+
+
+                    <span class="eyebrow">
+                        SUBMISSION COMPLETE
+                    </span>
+
+
+                    <h2>
+                        Inspection Submitted
+                    </h2>
+
+
+                    <p>
+                        Your inspection has been successfully
+                        submitted for review.
+                    </p>
+
+
+                    <div class="submission-details">
+
+
+                        <div>
+
+                            <span>
+                                Inspection ID
+                            </span>
+
+                            <b>
+                                INS-2026-00982
+                            </b>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Submitted
+                            </span>
+
+                            <b>
+                                19 Sep 2026, 11:24 AM
+                            </b>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Status
+                            </span>
+
+                            <b class="under-review">
+                                Under Review
+                            </b>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="secondary-action full">
+
+                        View Report
+
+                    </button>
+
+
+                    <button
+                        class="primary-action full"
+                        onclick="goDashboard()">
+
+                        Go to Dashboard
+                        <span>→</span>
+
+                    </button>
+
+                </article>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="../js/startinspection.js"></script>
+
+</body>
+
+</html>

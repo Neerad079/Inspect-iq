@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Inspector Registration | SmartInspect AI</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="css/register.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Background -->
+
+    <div class="background">
+
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+
+        <div class="grid"></div>
+
+    </div>
+
+
+    <!-- Brand -->
+
+    <header class="brand">
+
+        <a href="../admin/index.html"
+           class="brand-link">
+
+            <div class="brand-icon">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+            </div>
+
+            <div>
+
+                <h2>
+                    SmartInspect <span>AI</span>
+                </h2>
+
+                <p>
+                    Cyber Governance Platform
+                </p>
+
+            </div>
+
+        </a>
+
+    </header>
+
+
+    <!-- Registration -->
+
+    <main class="register-wrapper">
+
+
+        <div class="register-card">
+
+
+            <!-- Header -->
+
+            <div class="register-header">
+
+                <div class="register-icon">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                </div>
+
+                <div>
+
+                    <h1>
+                        Inspector Registration
+                    </h1>
+
+                    <p>
+                        Create your field inspector account
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Form -->
+
+            <form id="registerForm">
+
+
+                <div class="form-grid">
+
+
+                    <!-- Full Name -->
+
+                    <div class="input-group">
+
+                        <label for="fullName">
+                            Full Name
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-regular fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Inspector ID -->
+
+                    <div class="input-group">
+
+                        <label for="inspectorId">
+                            Inspector ID
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-id-card"></i>
+
+                            <input
+                                type="text"
+                                id="inspectorId"
+                                placeholder="Enter inspector ID"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="input-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter email address"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Phone -->
+
+                    <div class="input-group">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="Enter phone number"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Department -->
+
+                    <div class="input-group">
+
+                        <label for="department">
+                            Department
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-building"></i>
+
+                            <select id="department" required>
+
+                                <option value="">
+                                    Select department
+                                </option>
+
+                                <option>
+                                    Education
+                                </option>
+
+                                <option>
+                                    Healthcare
+                                </option>
+
+                                <option>
+                                    Infrastructure
+                                </option>
+
+                                <option>
+                                    Municipal Administration
+                                </option>
+
+                                <option>
+                                    Public Works
+                                </option>
+
+                                <option>
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Designation -->
+
+                    <div class="input-group">
+
+                        <label for="designation">
+                            Designation
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-briefcase"></i>
+
+                            <input
+                                type="text"
+                                id="designation"
+                                placeholder="Inspector designation"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="input-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Create password"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Confirm Password -->
+
+                    <div class="input-group">
+
+                        <label for="confirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                placeholder="Confirm password"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- Terms -->
+
+                <label class="terms">
+
+                    <input
+                        type="checkbox"
+                        required
+                    >
+
+                    <span>
+                        I agree to the SmartInspect AI
+                        inspector terms and conditions.
+                    </span>
+
+                </label>
+
+
+                <!-- Register -->
+
+                <button
+                    type="submit"
+                    class="register-submit"
+                >
+
+                    <span>
+                        Create Inspector Account
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+            </form>
+
+
+            <!-- Already registered -->
+
+            <div class="already">
+
+                <span>
+                    Already have an account?
+                </span>
+
+                <a href="login.html">
+                    Sign In
+                </a>
+
+            </div>
+           
+
+            <a href="../index.html"
+               class="back-home">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back to SmartInspect AI
+
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+    <footer>
+
+        © 2026 SmartInspect AI
+        <span>•</span>
+        Secure Inspector Registration
+
+    </footer>
+
+
+    <script>
+
+        const form =
+            document.getElementById("registerForm");
+
+        form.addEventListener("submit", function(e) {
+
+            e.preventDefault();
+
+            const password =
+                document.getElementById("password").value;
+
+            const confirmPassword =
+                document.getElementById("confirmPassword").value;
+
+
+            if (password !== confirmPassword) {
+
+                alert("Passwords do not match.");
+
+                return;
+
+            }
+
+
+            /*
+             * Later connect this form
+             * to your backend API.
+             */
+
+            alert(
+                "Registration form submitted successfully!"
+            );
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

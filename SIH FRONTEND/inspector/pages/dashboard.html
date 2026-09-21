@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartInspect | Inspector Dashboard</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+<!-- Mobile Overlay -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- ================= SIDEBAR ================= -->
+<aside class="sidebar" id="sidebar">
+
+    <div class="brand">
+        <div class="brand-logo">
+            🛡
+        </div>
+
+        <div>
+            <h2>SmartInspect</h2>
+            <span>Inspector Portal</span>
+        </div>
+    </div>
+
+    <button class="sidebar-close" id="sidebarClose">
+        ✕
+    </button>
+
+    <nav class="sidebar-nav">
+
+        <a href="dashboard.html" class="nav-item active">
+            <span class="nav-icon">▣</span>
+            <span>Dashboard</span>
+        </a>
+
+        <a href="myassignment.html" class="nav-item">
+            <span class="nav-icon">▤</span>
+            <span>My Assignments</span>
+        </a>
+
+        <a href="startinspection.html" class="nav-item">
+            <span class="nav-icon">◷</span>
+            <span>Start Inspection</span>
+        </a>
+
+        <a href="history.html" class="nav-item">
+            <span class="nav-icon">◴</span>
+            <span>History</span>
+        </a>
+
+        <a href="notifications.html" class="nav-item">
+            <span class="nav-icon">♧</span>
+            <span>Notifications</span>
+            <span class="notification-badge">3</span>
+        </a>
+
+        <a href="profile.html" class="nav-item">
+            <span class="nav-icon">♙</span>
+            <span>Profile & Settings</span>
+        </a>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+        <div class="security-box">
+            <div class="security-icon">✓</div>
+
+            <div>
+                <strong>Verified Inspector</strong>
+                <span>Secure field access</span>
+            </div>
+        </div>
+
+        <button class="logout-btn" id="logoutBtn">
+            <span>↪</span>
+            Logout
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- ================= MAIN AREA ================= -->
+
+<div class="main-wrapper">
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+
+        <div class="topbar-left">
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+
+            <div class="page-title">
+                <span>Inspector Portal</span>
+                <h1>Dashboard</h1>
+            </div>
+
+        </div>
+
+        <div class="topbar-right">
+
+            <!-- Notification -->
+            <button class="top-notification" id="notificationBtn">
+                ♧
+                <span>3</span>
+            </button>
+
+            <!-- Profile -->
+            <div class="profile-mini">
+
+                <div class="profile-avatar">
+                    👨🏻
+                </div>
+
+                <div class="profile-info">
+                    <strong>Inspector Rahul</strong>
+                    <span>INS-1042</span>
+                </div>
+
+                <span class="profile-arrow">⌄</span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= CONTENT ================= -->
+
+    <main class="dashboard-content">
+
+        <!-- Welcome -->
+        <section class="welcome-section">
+
+            <div>
+                <p class="small-label">FIELD INSPECTION PORTAL</p>
+
+                <h2>
+                    Good Morning,
+                    <span>Inspector Rahul</span>
+                    👋
+                </h2>
+
+                <p class="welcome-text">
+                    Every inspection creates a safer, stronger society.
+                </p>
+            </div>
+
+            <div class="date-box">
+
+                <span>Friday</span>
+
+                <strong>
+                    19 September 2026
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATISTICS ================= -->
+
+        <section class="stats-grid">
+
+            <!-- Assigned -->
+            <div class="stat-card blue">
+
+                <div class="stat-icon">
+                    ▣
+                </div>
+
+                <div class="stat-content">
+                    <strong>08</strong>
+                    <span>Assigned</span>
+                </div>
+
+            </div>
+
+
+            <!-- In Progress -->
+            <div class="stat-card orange">
+
+                <div class="stat-icon">
+                    ◷
+                </div>
+
+                <div class="stat-content">
+                    <strong>02</strong>
+                    <span>In Progress</span>
+                </div>
+
+            </div>
+
+
+            <!-- Completed -->
+            <div class="stat-card green">
+
+                <div class="stat-icon">
+                    ✓
+                </div>
+
+                <div class="stat-content">
+                    <strong>24</strong>
+                    <span>Completed</span>
+                </div>
+
+            </div>
+
+
+            <!-- High Priority -->
+            <div class="stat-card red">
+
+                <div class="stat-icon">
+                    ●
+                </div>
+
+                <div class="stat-content">
+                    <strong>02</strong>
+                    <span>High Priority</span>
+                </div>
+
+            </div>
+
+
+            <!-- Due Today -->
+            <div class="stat-card yellow">
+
+                <div class="stat-icon">
+                    ♟
+                </div>
+
+                <div class="stat-content">
+                    <strong>03</strong>
+                    <span>Due Today</span>
+                </div>
+
+            </div>
+
+
+            <!-- Overdue -->
+            <div class="stat-card danger">
+
+                <div class="stat-icon">
+                    !
+                </div>
+
+                <div class="stat-content">
+                    <strong>01</strong>
+                    <span>Overdue</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= LOWER CONTENT ================= -->
+
+        <section class="dashboard-lower">
+
+            <!-- QUICK ACTIONS -->
+
+            <div class="quick-section">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p>WORKFLOW</p>
+                        <h3>Quick Actions</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="quick-grid">
+
+                    <!-- Start Inspection -->
+                    <button
+                        class="quick-card"
+                        onclick="openPage('startinspection.html')"
+                    >
+
+                        <div class="quick-icon blue-icon">
+                            ▶
+                        </div>
+
+                        <div>
+                            <strong>Start Inspection</strong>
+                            <span>Begin a new inspection</span>
+                        </div>
+
+                        <b>→</b>
+
+                    </button>
+
+
+                    <!-- Assignments -->
+                    <button
+                        class="quick-card"
+                        onclick="openPage('myassignment.html')"
+                    >
+
+                        <div class="quick-icon cyan-icon">
+                            ▤
+                        </div>
+
+                        <div>
+                            <strong>View Assignments</strong>
+                            <span>See all assigned tasks</span>
+                        </div>
+
+                        <b>→</b>
+
+                    </button>
+
+
+                    <!-- History -->
+                    <button
+                        class="quick-card"
+                        onclick="openPage('history.html')"
+                    >
+
+                        <div class="quick-icon purple-icon">
+                            ◴
+                        </div>
+
+                        <div>
+                            <strong>Inspection History</strong>
+                            <span>View past inspections</span>
+                        </div>
+
+                        <b>→</b>
+
+                    </button>
+
+
+                    <!-- Notifications -->
+                    <button
+                        class="quick-card"
+                        onclick="openPage('notifications.html')"
+                    >
+
+                        <div class="quick-icon red-icon">
+                            ♧
+                        </div>
+
+                        <div>
+                            <strong>Notifications</strong>
+                            <span>3 new notifications</span>
+                        </div>
+
+                        <b>→</b>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= MOTIVATION CARD ================= -->
+
+            <div class="impact-card">
+
+                <div class="impact-image"></div>
+
+                <div class="impact-overlay">
+
+                    <div class="impact-badge">
+                        FIELD IMPACT
+                    </div>
+
+                    <h3>
+                        On the ground,
+                        <br>
+                        for a better
+                        <br>
+                        tomorrow.
+                    </h3>
+
+                    <p>
+                        See. Verify. Ensure Impact.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BOTTOM INFO ================= -->
+
+        <section class="verification-strip">
+
+            <div class="verification-item">
+
+                <div class="verification-icon">
+                    ✓
+                </div>
+
+                <div>
+                    <strong>Evidence Verification</strong>
+                    <span>GPS-tagged field evidence</span>
+                </div>
+
+            </div>
+
+
+            <div class="verification-item">
+
+                <div class="verification-icon">
+                    ◎
+                </div>
+
+                <div>
+                    <strong>Live Location</strong>
+                    <span>Location verification enabled</span>
+                </div>
+
+            </div>
+
+
+            <div class="verification-item">
+
+                <div class="verification-icon">
+                    AI
+                </div>
+
+                <div>
+                    <strong>AI Risk Analysis</strong>
+                    <span>Anomaly detection active</span>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- ================= NOTIFICATION PANEL ================= -->
+
+<div class="notification-panel" id="notificationPanel">
+
+    <div class="notification-header">
+        <div>
+            <span>UPDATES</span>
+            <h3>Notifications</h3>
+        </div>
+
+        <button id="closeNotifications">
+            ✕
+        </button>
+    </div>
+
+
+    <div class="notification-item high">
+
+        <div class="notification-symbol">
+            !
+        </div>
+
+        <div>
+            <strong>New inspection assigned</strong>
+            <p>ABC Rehabilitation Centre</p>
+            <small>10 minutes ago</small>
+        </div>
+
+    </div>
+
+
+    <div class="notification-item success">
+
+        <div class="notification-symbol">
+            ✓
+        </div>
+
+        <div>
+            <strong>Inspection approved</strong>
+            <p>XYZ Centre inspection approved.</p>
+            <small>2 hours ago</small>
+        </div>
+
+    </div>
+
+
+    <div class="notification-item warning">
+
+        <div class="notification-symbol">
+            !
+        </div>
+
+        <div>
+            <strong>Clarification requested</strong>
+            <p>Additional evidence required.</p>
+            <small>4 hours ago</small>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+</html>

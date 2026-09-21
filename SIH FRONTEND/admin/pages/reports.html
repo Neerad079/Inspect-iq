@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Reports | SmartInspect AI</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="../css/reports.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar" id="sidebar">
+
+
+    <!-- LOGO -->
+
+    <div class="logo-area">
+
+        <div class="logo-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+        </div>
+
+        <div class="logo-text">
+            SmartInspect <b>AI</b>
+        </div>
+
+        <!-- Mobile close -->
+        <button
+            class="close-sidebar"
+            id="closeSidebar"
+            type="button"
+            aria-label="Close menu"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="navigation">
+
+        <a
+            href="dashboard.html"
+            class="nav-item"
+        >
+            <i class="fa-solid fa-house"></i>
+            <span>Dashboard</span>
+        </a>
+
+
+        <a
+            href="institutions.html"
+            class="nav-item"
+        >
+            <i class="fa-solid fa-building"></i>
+            <span>Institutions</span>
+        </a>
+
+
+        <a
+            href="inspections.html"
+            class="nav-item"
+        >
+            <i class="fa-solid fa-clipboard-check"></i>
+            <span>Inspections</span>
+        </a>
+
+
+        <a
+            href="alerts.html"
+            class="nav-item"
+        >
+            <i class="fa-solid fa-bell"></i>
+            <span>Alerts</span>
+        </a>
+
+
+        <!-- ACTIVE -->
+
+        <a
+            href="reports.html"
+            class="nav-item active"
+        >
+            <i class="fa-solid fa-file-lines"></i>
+            <span>Reports</span>
+        </a>
+
+
+        <a
+            href="inspectors.html"
+            class="nav-item"
+        >
+            <i class="fa-solid fa-user-shield"></i>
+            <span>Inspectors</span>
+        </a>
+
+
+        <a
+            href="settings.html"
+            class="nav-item"
+        >
+            <i class="fa-solid fa-gear"></i>
+            <span>Settings</span>
+        </a>
+
+    </nav>
+
+
+    <!-- ADMIN -->
+
+    <div class="admin-profile">
+
+        <div class="profile-image">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div class="profile-info">
+
+            <strong>Admin</strong>
+
+            <small>
+                Administrator
+            </small>
+
+        </div>
+
+        <i class="fa-solid fa-chevron-right profile-arrow"></i>
+
+    </div>
+
+</aside>
+
+
+<!-- =====================================================
+     SIDEBAR OVERLAY
+===================================================== -->
+
+<div
+    class="sidebar-overlay"
+    id="sidebarOverlay"
+></div>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- =================================================
+         MOBILE HEADER
+    ================================================= -->
+
+    <header class="mobile-header">
+
+        <button
+            class="menu-btn"
+            id="menuBtn"
+            type="button"
+            aria-label="Open menu"
+        >
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="mobile-brand">
+            SmartInspect <span>AI</span>
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         DESKTOP TOP BAR
+    ================================================= -->
+
+    <div class="topbar">
+
+        <div class="top-search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="topSearch"
+                placeholder="Search reports..."
+                autocomplete="off"
+            >
+
+        </div>
+
+
+        <div class="top-actions">
+
+            <button
+                class="notification-btn"
+                type="button"
+            >
+
+                <i class="fa-solid fa-bell"></i>
+
+                <span>5</span>
+
+            </button>
+
+
+            <div class="top-avatar">
+                A
+            </div>
+
+
+            <div class="top-admin">
+
+                <span>Admin</span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         PAGE CONTENT
+    ================================================= -->
+
+    <div class="page-content">
+
+
+        <!-- PAGE HEADER -->
+
+        <section class="page-header">
+
+
+            <div class="header-left">
+
+                <div class="page-icon">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h1>
+                        Reports
+                    </h1>
+
+                    <p>
+                        Generate and view inspection reports
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="generate-btn"
+                id="generateReportBtn"
+                type="button"
+            >
+
+                <i class="fa-solid fa-plus"></i>
+
+                Generate Report
+
+            </button>
+
+        </section>
+
+
+
+        <!-- =================================================
+             STATISTICS
+        ================================================= -->
+
+        <section class="stats-grid">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Total Reports
+                    </span>
+
+                    <strong>
+                        26
+                    </strong>
+
+                    <small class="positive">
+                        ↑ 12%
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Completed
+                    </span>
+
+                    <strong>
+                        18
+                    </strong>
+
+                    <small class="positive">
+                        ↑ 8%
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        In Progress
+                    </span>
+
+                    <strong>
+                        5
+                    </strong>
+
+                    <small class="positive">
+                        ↑ 25%
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon red">
+
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Critical Findings
+                    </span>
+
+                    <strong>
+                        3
+                    </strong>
+
+                    <small class="negative">
+                        ↑ 50%
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CHARTS
+        ================================================= -->
+
+        <section class="charts-grid">
+
+
+            <!-- REPORT TREND -->
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <h2>
+                        Reports Trend
+                    </h2>
+
+                    <select id="trendPeriod">
+
+                        <option>
+                            Last 6 Months
+                        </option>
+
+                        <option>
+                            Last 12 Months
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="bar-chart">
+
+                    <div class="y-axis">
+
+                        <span>20</span>
+                        <span>15</span>
+                        <span>10</span>
+                        <span>5</span>
+                        <span>0</span>
+
+                    </div>
+
+
+                    <div class="bars">
+
+
+                        <div class="bar-wrapper">
+
+                            <div
+                                class="bar"
+                                style="height:45%;"
+                            ></div>
+
+                            <span>Jan</span>
+
+                        </div>
+
+
+                        <div class="bar-wrapper">
+
+                            <div
+                                class="bar"
+                                style="height:55%;"
+                            ></div>
+
+                            <span>Feb</span>
+
+                        </div>
+
+
+                        <div class="bar-wrapper">
+
+                            <div
+                                class="bar"
+                                style="height:60%;"
+                            ></div>
+
+                            <span>Mar</span>
+
+                        </div>
+
+
+                        <div class="bar-wrapper">
+
+                            <div
+                                class="bar"
+                                style="height:78%;"
+                            ></div>
+
+                            <span>Apr</span>
+
+                        </div>
+
+
+                        <div class="bar-wrapper">
+
+                            <div
+                                class="bar"
+                                style="height:66%;"
+                            ></div>
+
+                            <span>May</span>
+
+                        </div>
+
+
+                        <div class="bar-wrapper">
+
+                            <div
+                                class="bar"
+                                style="height:85%;"
+                            ></div>
+
+                            <span>Jun</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FINDINGS -->
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <h2>
+                        Findings Distribution
+                    </h2>
+
+                </div>
+
+
+                <div class="donut-wrapper">
+
+
+                    <div class="donut">
+
+                        <div class="donut-center">
+
+                            <strong>
+                                26
+                            </strong>
+
+                            <span>
+                                Reports
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="legend">
+
+                        <div>
+
+                            <span class="legend-dot compliant"></span>
+
+                            <span>Compliant</span>
+
+                            <b>60%</b>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="legend-dot minor"></span>
+
+                            <span>Minor Issues</span>
+
+                            <b>25%</b>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="legend-dot major"></span>
+
+                            <span>Major Issues</span>
+
+                            <b>10%</b>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="legend-dot critical"></span>
+
+                            <span>Critical</span>
+
+                            <b>5%</b>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FILTERS
+        ================================================= -->
+
+        <section class="filters">
+
+
+            <div class="filter-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="reportSearch"
+                    placeholder="Search reports..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <select id="statusFilter">
+
+                <option value="all">
+                    All Status
+                </option>
+
+                <option value="completed">
+                    Completed
+                </option>
+
+                <option value="progress">
+                    In Progress
+                </option>
+
+                <option value="critical">
+                    Critical
+                </option>
+
+            </select>
+
+
+            <select id="monthFilter">
+
+                <option value="all">
+                    All Months
+                </option>
+
+                <option value="sep">
+                    September
+                </option>
+
+                <option value="aug">
+                    August
+                </option>
+
+            </select>
+
+
+            <button
+                class="filter-btn"
+                id="filterBtn"
+                type="button"
+            >
+
+                <i class="fa-solid fa-filter"></i>
+
+                Filter
+
+            </button>
+
+        </section>
+
+
+
+        <!-- =================================================
+             REPORT TABLE
+        ================================================= -->
+
+        <section class="reports-section">
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>#</th>
+
+                            <th>
+                                Institution
+                            </th>
+
+                            <th>
+                                Inspection Date
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Findings
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="reportsTable">
+
+
+                        <tr
+                            data-status="completed"
+                            data-month="sep"
+                        >
+
+                            <td>1</td>
+
+                            <td>
+                                XYZ Institute
+                            </td>
+
+                            <td>
+                                12 Sep 2026
+                            </td>
+
+                            <td>
+
+                                <span class="status completed">
+                                    Completed
+                                </span>
+
+                            </td>
+
+                            <td>
+                                2
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="view-btn"
+                                    onclick="viewReport('XYZ Institute')"
+                                >
+
+                                    <i class="fa-solid fa-eye"></i>
+
+                                    View
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <tr
+                            data-status="progress"
+                            data-month="sep"
+                        >
+
+                            <td>2</td>
+
+                            <td>
+                                LMN School
+                            </td>
+
+                            <td>
+                                10 Sep 2026
+                            </td>
+
+                            <td>
+
+                                <span class="status progress">
+                                    In Progress
+                                </span>
+
+                            </td>
+
+                            <td>
+                                4
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="view-btn"
+                                    onclick="viewReport('LMN School')"
+                                >
+
+                                    <i class="fa-solid fa-eye"></i>
+
+                                    View
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <tr
+                            data-status="completed"
+                            data-month="sep"
+                        >
+
+                            <td>3</td>
+
+                            <td>
+                                ABC College
+                            </td>
+
+                            <td>
+                                05 Sep 2026
+                            </td>
+
+                            <td>
+
+                                <span class="status completed">
+                                    Completed
+                                </span>
+
+                            </td>
+
+                            <td>
+                                1
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="view-btn"
+                                    onclick="viewReport('ABC College')"
+                                >
+
+                                    <i class="fa-solid fa-eye"></i>
+
+                                    View
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <tr
+                            data-status="critical"
+                            data-month="sep"
+                        >
+
+                            <td>4</td>
+
+                            <td>
+                                Sunrise Academy
+                            </td>
+
+                            <td>
+                                01 Sep 2026
+                            </td>
+
+                            <td>
+
+                                <span class="status critical">
+                                    Critical
+                                </span>
+
+                            </td>
+
+                            <td>
+                                6
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="view-btn"
+                                    onclick="viewReport('Sunrise Academy')"
+                                >
+
+                                    <i class="fa-solid fa-eye"></i>
+
+                                    View
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <tr
+                            data-status="completed"
+                            data-month="aug"
+                        >
+
+                            <td>5</td>
+
+                            <td>
+                                Greenfield School
+                            </td>
+
+                            <td>
+                                28 Aug 2026
+                            </td>
+
+                            <td>
+
+                                <span class="status completed">
+                                    Completed
+                                </span>
+
+                            </td>
+
+                            <td>
+                                0
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="view-btn"
+                                    onclick="viewReport('Greenfield School')"
+                                >
+
+                                    <i class="fa-solid fa-eye"></i>
+
+                                    View
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+
+            <!-- TABLE FOOTER -->
+
+            <div class="table-footer">
+
+                <span id="resultText">
+                    Showing 1–5 of 26 reports
+                </span>
+
+
+                <div class="pagination">
+
+                    <button
+                        type="button"
+                        class="prev-page"
+                    >
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="page-active"
+                    >
+                        1
+                    </button>
+
+
+                    <button type="button">
+                        2
+                    </button>
+
+
+                    <button type="button">
+                        3
+                    </button>
+
+
+                    <button type="button">
+                        4
+                    </button>
+
+
+                    <button type="button">
+                        5
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="next-page"
+                    >
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+
+<!-- =====================================================
+     GENERATE REPORT MODAL
+===================================================== -->
+
+<div
+    class="modal-overlay"
+    id="reportModal"
+>
+
+    <div class="modal">
+
+        <button
+            class="modal-close"
+            id="closeModal"
+            type="button"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <div class="modal-icon">
+
+            <i class="fa-solid fa-file-circle-plus"></i>
+
+        </div>
+
+
+        <h2>
+            Generate Report
+        </h2>
+
+        <p>
+            Create a new inspection report.
+        </p>
+
+
+        <label for="institutionSelect">
+            Institution
+        </label>
+
+        <select id="institutionSelect">
+
+            <option value="">
+                Select institution
+            </option>
+
+            <option value="XYZ Institute">
+                XYZ Institute
+            </option>
+
+            <option value="LMN School">
+                LMN School
+            </option>
+
+            <option value="ABC College">
+                ABC College
+            </option>
+
+            <option value="Sunrise Academy">
+                Sunrise Academy
+            </option>
+
+            <option value="Greenfield School">
+                Greenfield School
+            </option>
+
+        </select>
+
+
+        <label for="reportType">
+            Report Type
+        </label>
+
+        <select id="reportType">
+
+            <option>
+                Inspection Report
+            </option>
+
+            <option>
+                Compliance Report
+            </option>
+
+            <option>
+                Risk Assessment
+            </option>
+
+        </select>
+
+
+        <button
+            class="generate-modal-btn"
+            id="createReport"
+            type="button"
+        >
+
+            <i class="fa-solid fa-file-circle-check"></i>
+
+            Generate Report
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     VIEW REPORT MODAL
+===================================================== -->
+
+<div
+    class="modal-overlay"
+    id="viewModal"
+>
+
+    <div class="modal view-modal">
+
+        <button
+            class="modal-close"
+            type="button"
+            onclick="closeViewModal()"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div class="modal-icon">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+        </div>
+
+
+        <h2 id="viewInstitution">
+            Institution Report
+        </h2>
+
+
+        <p>
+            Inspection report summary
+        </p>
+
+
+        <div class="report-details">
+
+
+            <div>
+
+                <span>
+                    Report Status
+                </span>
+
+                <strong>
+                    Completed
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Inspection Type
+                </span>
+
+                <strong>
+                    Institutional
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Findings
+                </span>
+
+                <strong>
+                    2
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Risk Level
+                </span>
+
+                <strong>
+                    Medium
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="generate-modal-btn"
+            type="button"
+            onclick="alert('Opening complete report...')"
+        >
+
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            Open Full Report
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="../js/reports.js"></script>
+
+</body>
+</html>
